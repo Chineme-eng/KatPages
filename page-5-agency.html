@@ -30,24 +30,26 @@
       overflow: hidden;
       text-align: right;
   } 
-     /* The Artistic Paint Splash */
+    /* HERO — Artistic Background Integration */
     .hero::before {
       content: '';
       position: absolute;
-      top: 50%;
-      left: -5%; /* Positions it on the left side */
-      transform: translateY(-50%);
-      width: 60%;
-      height: 90%;
-      background-image: url('https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&q=80&w=1200');
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: left center;
-      mix-blend-mode: multiply; /* Blends the "paint" into your paper-colored background */
-      opacity: 0.15; /* Keeps it subtle and professional, not distracting */
-      filter: grayscale(1) contrast(1.2); /* Makes it look like black ink to match the theme */
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      /* Using a more expansive, high-quality abstract ink/paint texture */
+      background-image: url('https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&q=80&w=1600');
+      background-size: cover;
+      background-position: center;
+      /* Color-burn makes it interact with the background color for a premium look */
+      mix-blend-mode: color-burn; 
+      opacity: 0.1; /* Keeping it very light so it's a "vibe" rather than a distraction */
       pointer-events: none;
       z-index: 1;
+      /* Creating a fade so the texture disappears as you scroll down */
+      -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+      mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
     }
    .hero-top {
       width: 100%; 
