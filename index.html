@@ -739,49 +739,156 @@
 </footer>
 
 <script>
+  // THE MASTER DICTIONARY
+  // It looks for these exact English phrases and swaps them automatically.
   const translations = {
-    en: {
-      "nav-work": "Work", "nav-pricing": "Pricing", "nav-about": "About", "nav-faq": "FAQ", "nav-book": "Book a page →",
-      "hero-title": "I build landing pages that <em>actually <span class='squiggle'>work.</span></em>",
-      "price-title": "Simple, honest <em>pricing</em>"
-    },
     es: {
-      "nav-work": "Trabajo", "nav-pricing": "Precios", "nav-about": "Sobre mí", "nav-faq": "FAQ", "nav-book": "Reservar →",
-      "hero-title": "Creo páginas de aterrizaje que realmente <em><span class='squiggle'>funcionan.</span></em>",
-      "price-title": "Precios simples y <em>honestos</em>"
+      "Work": "Trabajo", "Pricing": "Precios", "Contact": "Contacto", "Book a Page": "Reservar",
+      "I build landing pages that": "Creo páginas de aterrizaje que", "actually": "realmente", "work.": "funcionan.",
+      "No fluff, no jargon — just clean, beautiful pages designed to turn visitors into customers. Let's make something you're proud to share.": "Sin rodeos ni jerga — solo páginas limpias y hermosas diseñadas para convertir visitantes en clientes. Hagamos algo de lo que estés orgulloso.",
+      "Book a page": "Reservar página", "See my work": "Ver mi trabajo",
+      "Pages I've built": "Páginas que he creado", "Want one like these?": "¿Quieres una como estas?",
+      "Simple, honest": "Precios simples y", "pricing": "honestos",
+      "No surprise invoices. Pick a plan that fits where you're at — you can always upgrade as you grow.": "Sin facturas sorpresa. Elige un plan que se adapte a ti — siempre puedes mejorar a medida que creces.",
+      "Starter": "Básico", "Builder": "Constructor", "Pro Launch": "Lanzamiento Pro",
+      "Get started free": "Comenzar gratis", "Book this plan": "Reservar este plan",
+      "Book a": "Reserva una", "page": "página",
+      "Questions I get asked": "Preguntas que me hacen", "a lot": "a menudo",
+      "How long does it take to build a page?": "¿Cuánto tiempo toma construir una página?",
+      "What do I need to provide to get started?": "¿Qué necesito proporcionar para empezar?",
+      "Do I own the code when it's done?": "¿Soy dueño del código cuando termina?",
+      "Why is the Starter plan free? What's the catch?": "¿Por qué el plan Starter es gratis? ¿Cuál es el truco?",
+      "Can I upgrade from Starter to Builder later?": "¿Puedo pasar del plan Starter al Builder más tarde?",
+      "Do you work with people outside the US?": "¿Trabajas con personas fuera de EE. UU.?",
+      "What if I don't love the final result?": "¿Qué pasa si no me encanta el resultado final?",
+      "Say": "¡Di", "hello!": "hola!", "Drop me a message": "Déjame un mensaje", "Send it": "Enviar"
     },
     fr: {
-      "nav-work": "Projets", "nav-pricing": "Tarifs", "nav-about": "À propos", "nav-faq": "FAQ", "nav-book": "Réserver →",
-      "hero-title": "Je crée des pages de destination qui fonctionnent <em>vraiment.</em>",
-      "price-title": "Tarifs simples et <em>honnêtes</em>"
+      "Work": "Projets", "Pricing": "Tarifs", "Contact": "Contact", "Book a Page": "Réserver",
+      "I build landing pages that": "Je crée des pages de destination qui", "actually": "vraiment", "work.": "fonctionnent.",
+      "No fluff, no jargon — just clean, beautiful pages designed to turn visitors into customers. Let's make something you're proud to share.": "Pas de blabla — juste des pages épurées conçues pour convertir vos visiteurs. Créons quelque chose dont vous serez fier.",
+      "Book a page": "Réserver une page", "See my work": "Voir mes projets",
+      "Pages I've built": "Pages que j'ai créées", "Want one like these?": "Vous en voulez une comme ça ?",
+      "Simple, honest": "Tarifs simples et", "pricing": "honnêtes",
+      "Starter": "Débutant", "Builder": "Constructeur", "Pro Launch": "Lancement Pro",
+      "Get started free": "Commencer gratuitement", "Book this plan": "Réserver ce forfait",
+      "Questions I get asked": "Questions qu'on me pose", "a lot": "souvent",
+      "How long does it take to build a page?": "Combien de temps faut-il pour créer une page ?",
+      "What do I need to provide to get started?": "Que dois-je fournir pour commencer ?",
+      "Do I own the code when it's done?": "Suis-je propriétaire du code à la fin ?",
+      "Why is the Starter plan free? What's the catch?": "Pourquoi le plan Starter est-il gratuit ? Où est le piège ?",
+      "Can I upgrade from Starter to Builder later?": "Puis-je passer de Starter à Builder plus tard ?",
+      "Do you work with people outside the US?": "Travaillez-vous avec des clients hors des États-Unis ?",
+      "What if I don't love the final result?": "Et si je n'aime pas le résultat final ?",
+      "Say": "Dites", "hello!": "bonjour !", "Drop me a message": "Laissez-moi un message", "Send it": "Envoyer"
     },
     de: {
-      "nav-work": "Arbeit", "nav-pricing": "Preise", "nav-about": "Über mich", "nav-faq": "FAQ", "nav-book": "Buchen →",
-      "hero-title": "Ich erstelle Landingpages, die wirklich <em>funktionieren.</em>",
-      "price-title": "Einfache, ehrliche <em>Preise</em>"
+      "Work": "Arbeit", "Pricing": "Preise", "Contact": "Kontakt", "Book a Page": "Buchen",
+      "I build landing pages that": "Ich erstelle Landingpages, die", "actually": "wirklich", "work.": "funktionieren.",
+      "No fluff, no jargon — just clean, beautiful pages designed to turn visitors into customers. Let's make something you're proud to share.": "Kein Schnickschnack – nur saubere Seiten, die Besucher in Kunden verwandeln. Lass uns etwas erschaffen, auf das du stolz bist.",
+      "Book a page": "Seite buchen", "See my work": "Meine Arbeit ansehen",
+      "Pages I've built": "Seiten, die ich erstellt habe", "Want one like these?": "Möchtest du auch so eine?",
+      "Simple, honest": "Einfache, ehrliche", "pricing": "Preise",
+      "Starter": "Starter", "Builder": "Macher", "Pro Launch": "Pro-Start",
+      "Questions I get asked": "Fragen, die mir", "a lot": "oft gestellt werden",
+      "How long does it take to build a page?": "Wie lange dauert es, eine Seite zu erstellen?",
+      "What do I need to provide to get started?": "Was muss ich bereitstellen, um loszulegen?",
+      "Do I own the code when it's done?": "Gehört mir der Code, wenn es fertig ist?",
+      "Why is the Starter plan free? What's the catch?": "Warum ist der Starter-Plan kostenlos? Wo ist der Haken?",
+      "Can I upgrade from Starter to Builder later?": "Kann ich später vom Starter- zum Builder-Plan wechseln?",
+      "Do you work with people outside the US?": "Arbeitest du mit Kunden außerhalb der USA?",
+      "What if I don't love the final result?": "Was, wenn mir das Endergebnis nicht gefällt?",
+      "Say": "Sag", "hello!": "hallo!", "Drop me a message": "Hinterlass mir eine Nachricht", "Send it": "Senden"
     },
     jp: {
-      "nav-work": "実績", "nav-pricing": "料金", "nav-about": "自己紹介", "nav-faq": "FAQ", "nav-book": "予約する →",
-      "hero-title": "実際に効果のあるランディングページを<em>制作します。</em>",
-      "price-title": "シンプルで誠実な<em>料金体系</em>"
+      "Work": "実績", "Pricing": "料金", "Contact": "お問い合わせ", "Book a Page": "予約する",
+      "I build landing pages that": "実際に効果のあるランディングページを", "actually": "制作", "work.": "します。",
+      "No fluff, no jargon — just clean, beautiful pages designed to turn visitors into customers. Let's make something you're proud to share.": "専門用語や無駄を省き、訪問者を顧客に変える美しいページをデザインします。",
+      "Book a page": "ページを予約", "See my work": "実績を見る",
+      "Pages I've built": "これまでの制作実績", "Want one like these?": "このようなページをご希望ですか？",
+      "Simple, honest": "シンプルで誠実な", "pricing": "料金体系",
+      "Starter": "スターター", "Builder": "ビルダー", "Pro Launch": "プロローンチ",
+      "Questions I get asked": "よく", "a lot": "聞かれる質問",
+      "How long does it take to build a page?": "ページの制作にはどのくらいかかりますか？",
+      "What do I need to provide to get started?": "始めるにあたって何を用意すればいいですか？",
+      "Do I own the code when it's done?": "完成したコードの所有権は私にありますか？",
+      "Why is the Starter plan free? What's the catch?": "なぜスタータープランは無料なのですか？裏はありますか？",
+      "Can I upgrade from Starter to Builder later?": "後からスターターからビルダーにアップグレードできますか？",
+      "Do you work with people outside the US?": "米国外のクライアントとも仕事をしますか？",
+      "What if I don't love the final result?": "最終的な仕上がりが気に入らなかったらどうなりますか？",
+      "Say": "お気軽に", "hello!": "ご連絡ください！", "Drop me a message": "メッセージを送る", "Send it": "送信"
     },
     hi: {
-      "nav-work": "काम", "nav-pricing": "कीमतें", "nav-about": "मेरे बारे में", "nav-faq": "FAQ", "nav-book": "बुक करें →",
-      "hero-title": "मैं ऐसे लैंडिंग पेज बनाता हूँ जो वास्तव में <em>काम करते हैं।</em>",
-      "price-title": "सरल और ईमानदार <em>कीमतें</em>"
+      "Work": "काम", "Pricing": "कीमतें", "Contact": "संपर्क", "Book a Page": "बुक करें",
+      "I build landing pages that": "मैं ऐसे लैंडिंग पेज बनाता हूँ जो", "actually": "वास्तव में", "work.": "काम करते हैं।",
+      "No fluff, no jargon — just clean, beautiful pages designed to turn visitors into customers. Let's make something you're proud to share.": "कोई फालतू बात नहीं — सिर्फ साफ, सुंदर पेज जो आगंतुकों को ग्राहकों में बदलते हैं।",
+      "Book a page": "पेज बुक करें", "See my work": "मेरा काम देखें",
+      "Pages I've built": "मेरे बनाए गए पेज", "Want one like these?": "क्या आपको भी ऐसा ही चाहिए?",
+      "Simple, honest": "सरल और ईमानदार", "pricing": "कीमतें",
+      "Starter": "शुरुआती", "Builder": "बिल्डर", "Pro Launch": "प्रो लॉन्च",
+      "Questions I get asked": "अक्सर पूछे जाने वाले", "a lot": "प्रश्न",
+      "How long does it take to build a page?": "एक पेज बनाने में कितना समय लगता है?",
+      "What do I need to provide to get started?": "शुरू करने के लिए मुझे क्या देना होगा?",
+      "Do I own the code when it's done?": "क्या पूरा होने पर कोड मेरा होगा?",
+      "Why is the Starter plan free? What's the catch?": "स्टार्टर प्लान मुफ़्त क्यों है? क्या कोई शर्त है?",
+      "Can I upgrade from Starter to Builder later?": "क्या मैं बाद में स्टार्टर से बिल्डर में अपग्रेड कर सकता हूँ?",
+      "Do you work with people outside the US?": "क्या आप अमेरिका के बाहर के लोगों के साथ काम करते हैं?",
+      "What if I don't love the final result?": "अगर मुझे अंतिम परिणाम पसंद नहीं आया तो क्या होगा?",
+      "Say": "नमस्ते", "hello!": "कहें!", "Drop me a message": "मुझे एक संदेश छोड़ें", "Send it": "भेजें"
     }
   };
 
+  let currentLang = 'en';
+
   function changeLanguage(lang) {
-    document.querySelectorAll('[data-key]').forEach(el => {
-      const key = el.getAttribute('data-key');
-      if (translations[lang] && translations[lang][key]) {
-        el.innerHTML = translations[lang][key]; // Using innerHTML to keep the squiggle!
+    if (lang === currentLang) return;
+    
+    // Refresh the page when going back to English to restore the original HTML cleanly
+    if (lang === 'en') { 
+      location.reload(); 
+      return; 
+    } 
+    // If switching between two foreign languages, reload first so it translates from the clean English base
+    if (currentLang !== 'en' && lang !== 'en') {
+      sessionStorage.setItem('targetLang', lang);
+      location.reload();
+      return;
+    }
+
+    const dict = translations[lang];
+    
+    // The "TreeWalker" logic: It scans all text on the site WITHOUT breaking your HTML tags
+    const walk = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+    let node;
+    
+    while(node = walk.nextNode()) {
+      let text = node.nodeValue.trim();
+      if (text && dict[text]) {
+        node.nodeValue = node.nodeValue.replace(text, dict[text]);
       }
+    }
+    
+    // Fallback for nested elements like your buttons and squiggles
+    document.querySelectorAll('em, span, a, button').forEach(el => {
+       let t = el.innerText.trim();
+       if(dict[t]) el.innerText = dict[t];
     });
+
     document.documentElement.lang = lang;
+    currentLang = lang;
   }
 
+  // Auto-load a language if the page had to refresh to switch it safely
+  window.addEventListener('DOMContentLoaded', () => {
+    const savedLang = sessionStorage.getItem('targetLang');
+    if (savedLang) {
+      document.getElementById('langSelect').value = savedLang;
+      sessionStorage.removeItem('targetLang');
+      changeLanguage(savedLang);
+    }
+  });
+
+  // --- Your Exact Site Logic Below (Untouched) ---
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40));
   
