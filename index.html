@@ -85,71 +85,27 @@
     .showcase-card.featured { grid-column: 1 / -1; }
 
     .card-thumb {
-      width: 100%;
-      position: relative;
-      overflow: hidden;
-    }
-    .showcase-card.featured .card-thumb { height: 520px; }
-    .showcase-card:not(.featured) .card-thumb { height: 300px; }
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background: #0d0d0d;
+}
+.showcase-card.featured .card-thumb { height: 520px; }
+.showcase-card:not(.featured) .card-thumb { height: 300px; }
 
-    .thumb-frame {
-      width: 100%; height: 100%;
-      display: flex; align-items: center; justify-content: center;
-      transition: transform 0.6s;
-      position: relative;
-    }
-    .showcase-card:hover .thumb-frame { transform: scale(1.04); }
-
-    /* Each page's preview gradient theme */
-    .th-saas { background: linear-gradient(135deg, #070711 0%, #1a0a3a 40%, #4a1a9a 70%, #7c3aed 100%); }
-    .th-eco  { background: linear-gradient(135deg, #0d2410 0%, #1e4a1e 50%, #7bc47b 100%); }
-    .th-shop { background: linear-gradient(135deg, #1a1208 0%, #5c3a0a 40%, #b8860b 70%, #f0c060 100%); }
-    .th-app  { background: linear-gradient(135deg, #0a0f1e 0%, #1a3a6a 50%, #38bdf8 100%); }
-    .th-agcy { background: linear-gradient(135deg, #0d0d0a 0%, #3a0808 40%, #cc2200 80%, #e84a1a 100%); }
-    .th-food { background: linear-gradient(135deg, #1c0804 0%, #5a2010 40%, #c4622d 70%, #d4a030 100%); }
-    .th-fit  { background: linear-gradient(135deg, #0c0c0a 0%, #2a2a20 40%, #6a8a10 70%, #d4f060 100%); }
-
-    /* Mini browser chrome inside the thumb */
-    .browser-chrome {
-      position: absolute;
-      top: 1.5rem; left: 50%;
-      transform: translateX(-50%);
-      width: min(90%, 700px);
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 10px;
-      overflow: hidden;
-      backdrop-filter: blur(4px);
-    }
-    .bc-bar {
-      padding: 0.55rem 1rem;
-      background: rgba(0,0,0,0.3);
-      display: flex; align-items: center; gap: 0.5rem;
-    }
-    .bc-dot { width: 8px; height: 8px; border-radius: 50%; }
-    .bc-r { background: #ff5f57; } .bc-y { background: #febc2e; } .bc-g { background: #28c840; }
-    .bc-url { flex: 1; text-align: center; font-size: 0.65rem; color: rgba(255,255,255,0.35); font-family: monospace; }
-    .bc-body {
-      padding: 1.5rem 1.5rem 0;
-      min-height: 200px;
-      display: flex; flex-direction: column; gap: 0.8rem;
-    }
-    .featured .bc-body { min-height: 300px; padding: 2rem 2rem 0; }
-
-    /* Simulated page content inside mini browser */
-    .sim-nav { height: 28px; background: rgba(255,255,255,0.06); border-radius: 4px; display: flex; align-items: center; padding: 0 1rem; gap: 1rem; }
-    .sim-dot { width: 30px; height: 6px; border-radius: 3px; background: rgba(255,255,255,0.15); }
-    .sim-dot.wide { width: 60px; }
-    .sim-dot.short { width: 20px; }
-    .sim-hero-text { display: flex; flex-direction: column; gap: 0.6rem; padding: 1rem 0 0; }
-    .sim-line { height: 8px; border-radius: 4px; background: rgba(255,255,255,0.12); }
-    .sim-line.big { height: 14px; width: 70%; background: rgba(255,255,255,0.22); }
-    .sim-line.med { height: 10px; width: 55%; background: rgba(255,255,255,0.18); }
-    .sim-line.sm { width: 40%; }
-    .sim-btn { display: inline-block; width: 80px; height: 24px; border-radius: 4px; background: rgba(255,255,255,0.2); margin-top: 0.4rem; }
-    .sim-cards { display: flex; gap: 0.8rem; margin-top: 0.6rem; }
-    .sim-card { flex: 1; height: 60px; border-radius: 6px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.1); }
-
+.iframe-wrap {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+.iframe-wrap iframe {
+  position: absolute;
+  top: 0; left: 0;
+  border: none;
+  pointer-events: none;
+  transform-origin: top left;
+  display: block;
+}
     /* Overlay on hover */
     .thumb-overlay {
       position: absolute; inset: 0;
@@ -359,26 +315,11 @@
     <!-- 1. FEATURED — SaaS -->
     <a href="page-1-saas.html" target="_blank" class="showcase-card featured reveal">
       <div class="card-thumb">
-        <div class="thumb-frame th-saas">
-          <div class="browser-chrome" style="width:min(88%,780px)">
-            <div class="bc-bar"><span class="bc-dot bc-r"></span><span class="bc-dot bc-y"></span><span class="bc-dot bc-g"></span><span class="bc-url">orbit.app</span></div>
-            <div class="bc-body">
-              <div class="sim-nav"><span class="sim-dot wide"></span><span class="sim-dot"></span><span class="sim-dot"></span><span class="sim-dot short"></span></div>
-              <div class="sim-hero-text">
-                <div class="sim-line big"></div>
-                <div class="sim-line med"></div>
-                <div class="sim-line" style="width:65%;background:rgba(168,85,247,0.4);height:18px"></div>
-                <div class="sim-line sm"></div>
-                <div style="display:flex;gap:0.6rem;margin-top:0.5rem"><div class="sim-btn" style="background:rgba(124,58,237,0.6)"></div><div class="sim-btn" style="width:60px;background:rgba(255,255,255,0.08)"></div></div>
-              </div>
-              <div class="sim-cards">
-                <div class="sim-card"></div><div class="sim-card"></div><div class="sim-card"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="thumb-overlay"><div class="view-badge">View live page ↗</div></div>
-      </div>
+  <div class="iframe-wrap">
+    <iframe src="page-1-saas.html" loading="lazy" scrolling="no" tabindex="-1"></iframe>
+  </div>
+  <div class="thumb-overlay"><div class="view-badge">View live page ↗</div></div>
+</div>
       <div class="card-info">
         <div class="card-left">
           <div class="card-tags"><span class="tag">SaaS</span><span class="tag">Dark theme</span><span class="tag">Pricing</span></div>
@@ -392,25 +333,11 @@
     <!-- 2. Eco Startup -->
     <a href="page-2-eco.html" target="_blank" class="showcase-card reveal reveal-d1">
       <div class="card-thumb">
-        <div class="thumb-frame th-eco">
-          <div class="browser-chrome">
-            <div class="bc-bar"><span class="bc-dot bc-r"></span><span class="bc-dot bc-y"></span><span class="bc-dot bc-g"></span><span class="bc-url">verdant.co</span></div>
-            <div class="bc-body">
-              <div class="sim-hero-text">
-                <div class="sim-line" style="width:40%;height:6px;background:rgba(123,196,123,0.5)"></div>
-                <div class="sim-line big"></div>
-                <div class="sim-line med" style="background:rgba(255,255,255,0.15)"></div>
-                <div class="sim-line sm"></div>
-                <div class="sim-btn" style="background:rgba(13,36,16,0.8);border-radius:50px;width:100px"></div>
-              </div>
-              <div class="sim-cards" style="margin-top:1rem">
-                <div class="sim-card"></div><div class="sim-card"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="thumb-overlay"><div class="view-badge">View live page ↗</div></div>
-      </div>
+  <div class="iframe-wrap">
+    <iframe src="page-1-saas.html" loading="lazy" scrolling="no" tabindex="-1"></iframe>
+  </div>
+  <div class="thumb-overlay"><div class="view-badge">View live page ↗</div></div>
+</div>
       <div class="card-info">
         <div class="card-left">
           <div class="card-tags"><span class="tag">Eco/Startup</span><span class="tag">Scroll reveals</span></div>
@@ -424,24 +351,11 @@
     <!-- 3. E-commerce -->
     <a href="page-3-ecommerce.html" target="_blank" class="showcase-card reveal reveal-d2">
       <div class="card-thumb">
-        <div class="thumb-frame th-shop">
-          <div class="browser-chrome">
-            <div class="bc-bar"><span class="bc-dot bc-r"></span><span class="bc-dot bc-y"></span><span class="bc-dot bc-g"></span><span class="bc-url">aurum.store</span></div>
-            <div class="bc-body">
-              <div class="sim-hero-text">
-                <div class="sim-line" style="width:35%;height:5px;background:rgba(212,160,48,0.5)"></div>
-                <div class="sim-line big" style="background:rgba(255,255,255,0.2)"></div>
-                <div class="sim-line" style="width:75%;background:rgba(255,255,255,0.12)"></div>
-                <div class="sim-btn" style="background:rgba(26,18,8,0.7)"></div>
-              </div>
-              <div class="sim-cards" style="margin-top:1rem;gap:0.5rem">
-                <div class="sim-card" style="height:80px"></div><div class="sim-card" style="height:80px"></div><div class="sim-card" style="height:80px"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="thumb-overlay"><div class="view-badge">View live page ↗</div></div>
-      </div>
+  <div class="iframe-wrap">
+    <iframe src="page-1-saas.html" loading="lazy" scrolling="no" tabindex="-1"></iframe>
+  </div>
+  <div class="thumb-overlay"><div class="view-badge">View live page ↗</div></div>
+</div>
       <div class="card-info">
         <div class="card-left">
           <div class="card-tags"><span class="tag">E-commerce</span><span class="tag">Luxury</span><span class="tag">Warm</span></div>
@@ -455,24 +369,11 @@
     <!-- 4. App -->
     <a href="page-4-app.html" target="_blank" class="showcase-card reveal reveal-d1">
       <div class="card-thumb">
-        <div class="thumb-frame th-app">
-          <div class="browser-chrome">
-            <div class="bc-bar"><span class="bc-dot bc-r"></span><span class="bc-dot bc-y"></span><span class="bc-dot bc-g"></span><span class="bc-url">pulse.app</span></div>
-            <div class="bc-body">
-              <div class="sim-hero-text" style="align-items:center;text-align:center">
-                <div class="sim-line big" style="margin:0 auto"></div>
-                <div class="sim-line" style="width:60%;background:rgba(255,255,255,0.1);margin:0 auto"></div>
-                <div style="display:flex;gap:0.5rem;justify-content:center;margin-top:0.4rem">
-                  <div class="sim-btn" style="background:rgba(37,99,235,0.7);border-radius:10px"></div>
-                  <div class="sim-btn" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);border-radius:10px;width:60px"></div>
-                </div>
-                <div style="width:120px;height:200px;background:rgba(10,15,30,0.7);border:1px solid rgba(37,99,235,0.4);border-radius:20px;margin:0.8rem auto 0;display:flex;align-items:center;justify-content:center;font-size:1.5rem">📱</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="thumb-overlay"><div class="view-badge">View live page ↗</div></div>
-      </div>
+  <div class="iframe-wrap">
+    <iframe src="page-1-saas.html" loading="lazy" scrolling="no" tabindex="-1"></iframe>
+  </div>
+  <div class="thumb-overlay"><div class="view-badge">View live page ↗</div></div>
+</div>
       <div class="card-info">
         <div class="card-left">
           <div class="card-tags"><span class="tag">Mobile App</span><span class="tag">Fintech</span><span class="tag">Blue</span></div>
@@ -485,23 +386,12 @@
 
     <!-- 5. Agency -->
     <a href="page-5-agency.html" target="_blank" class="showcase-card reveal reveal-d2">
-      <div class="card-thumb">
-        <div class="thumb-frame th-agcy">
-          <div class="browser-chrome">
-            <div class="bc-bar"><span class="bc-dot bc-r"></span><span class="bc-dot bc-y"></span><span class="bc-dot bc-g"></span><span class="bc-url">fluxstudio.co</span></div>
-            <div class="bc-body">
-              <div class="sim-hero-text">
-                <div class="sim-line" style="width:80%;height:28px;background:rgba(255,255,255,0.18)"></div>
-                <div class="sim-line" style="width:70%;height:28px;background:rgba(255,255,255,0.15)"></div>
-                <div class="sim-line" style="width:50%;height:28px;background:rgba(204,34,0,0.5)"></div>
-                <div class="sim-line" style="width:65%;height:28px;background:rgba(255,255,255,0.12)"></div>
-              </div>
-              <div style="height:8px;background:rgba(204,34,0,0.4);margin-top:0.8rem;border-radius:2px"></div>
-            </div>
-          </div>
-        </div>
-        <div class="thumb-overlay"><div class="view-badge">View live page ↗</div></div>
-      </div>
+     <div class="card-thumb">
+  <div class="iframe-wrap">
+    <iframe src="page-1-saas.html" loading="lazy" scrolling="no" tabindex="-1"></iframe>
+  </div>
+  <div class="thumb-overlay"><div class="view-badge">View live page ↗</div></div>
+</div>
       <div class="card-info">
         <div class="card-left">
           <div class="card-tags"><span class="tag">Agency</span><span class="tag">Bold/Brutal</span><span class="tag">Marquee</span></div>
@@ -515,27 +405,11 @@
     <!-- 6. Restaurant -->
     <a href="page-6-restaurant.html" target="_blank" class="showcase-card reveal reveal-d1">
       <div class="card-thumb">
-        <div class="thumb-frame th-food">
-          <div class="browser-chrome">
-            <div class="bc-bar"><span class="bc-dot bc-r"></span><span class="bc-dot bc-y"></span><span class="bc-dot bc-g"></span><span class="bc-url">misoandco.com</span></div>
-            <div class="bc-body">
-              <div class="sim-hero-text">
-                <div class="sim-line" style="width:40%;height:5px;background:rgba(212,160,48,0.6)"></div>
-                <div class="sim-line big"></div>
-                <div class="sim-line" style="width:80%;background:rgba(255,255,255,0.14)"></div>
-                <div style="display:flex;gap:0.6rem;margin-top:0.4rem">
-                  <div class="sim-btn" style="background:rgba(212,160,48,0.6);border-radius:4px"></div>
-                  <div class="sim-btn" style="width:70px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:4px"></div>
-                </div>
-              </div>
-              <div class="sim-cards" style="margin-top:0.8rem">
-                <div class="sim-card" style="height:50px"></div><div class="sim-card" style="height:50px"></div><div class="sim-card" style="height:50px"></div><div class="sim-card" style="height:50px"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="thumb-overlay"><div class="view-badge">View live page ↗</div></div>
-      </div>
+  <div class="iframe-wrap">
+    <iframe src="page-1-saas.html" loading="lazy" scrolling="no" tabindex="-1"></iframe>
+  </div>
+  <div class="thumb-overlay"><div class="view-badge">View live page ↗</div></div>
+</div>
       <div class="card-info">
         <div class="card-left">
           <div class="card-tags"><span class="tag">Restaurant</span><span class="tag">Warm tones</span><span class="tag">Booking form</span></div>
@@ -548,29 +422,12 @@
 
     <!-- 7. Fitness — featured -->
     <a href="page-7-fitness.html" target="_blank" class="showcase-card featured reveal">
-      <div class="card-thumb">
-        <div class="thumb-frame th-fit">
-          <div class="browser-chrome" style="width:min(88%,780px)">
-            <div class="bc-bar"><span class="bc-dot bc-r"></span><span class="bc-dot bc-y"></span><span class="bc-dot bc-g"></span><span class="bc-url">formfitness.app</span></div>
-            <div class="bc-body" style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
-              <div class="sim-hero-text">
-                <div class="sim-line" style="width:50%;height:5px;background:rgba(212,240,96,0.5)"></div>
-                <div class="sim-line" style="width:90%;height:30px;background:rgba(255,255,255,0.18)"></div>
-                <div class="sim-line" style="width:80%;height:30px;background:rgba(255,255,255,0.14)"></div>
-                <div class="sim-line" style="width:60%;height:30px;background:rgba(255,255,255,0.1)"></div>
-                <div class="sim-line" style="width:50%;height:30px;background:rgba(212,240,96,0.35)"></div>
-                <div class="sim-btn" style="background:rgba(212,240,96,0.6);width:120px;height:28px;border-radius:4px;margin-top:0.5rem"></div>
-              </div>
-              <div style="display:flex;flex-direction:column;gap:0.6rem;padding-top:0.5rem">
-                <div style="height:55px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:8px"></div>
-                <div style="height:55px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:8px"></div>
-                <div style="height:55px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:8px"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="thumb-overlay"><div class="view-badge">View live page ↗</div></div>
-      </div>
+     <div class="card-thumb">
+  <div class="iframe-wrap">
+    <iframe src="page-1-saas.html" loading="lazy" scrolling="no" tabindex="-1"></iframe>
+  </div>
+  <div class="thumb-overlay"><div class="view-badge">View live page ↗</div></div>
+</div>
       <div class="card-info">
         <div class="card-left">
           <div class="card-tags"><span class="tag">Fitness</span><span class="tag">Bold type</span><span class="tag">Program cards</span><span class="tag">Lime accent</span></div>
@@ -780,7 +637,20 @@
   document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
   function toggleFaq(btn) { const item = btn.closest('.faq-item'); const wasOpen = item.classList.contains('open'); document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open')); if (!wasOpen) item.classList.add('open'); }
   function handleBook() { const n=document.getElementById('b-name').value.trim(),e=document.getElementById('b-email').value.trim(),p=document.getElementById('b-project').value.trim(); if(!n||!e||!p){alert('Please fill in your name, email, and project description.');return;} const m=document.getElementById('bookSuccess'); m.style.display='block'; setTimeout(()=>m.style.display='none',6000); }
-  function handleContact() { const n=document.getElementById('c-name').value.trim(),e=document.getElementById('c-email').value.trim(),msg=document.getElementById('c-msg').value.trim(); if(!n||!e||!msg){alert('Please fill in all fields.');return;} const m=document.getElementById('contactSuccess'); m.style.display='block'; setTimeout(()=>m.style.display='none',6000); }
-</script>
+  function handleContact() { const n=document.getElementById('c-name').value.trim(),e=document.getElementById('c-email').value.trim(),msg=document.getElementById('c-msg').value.trim(); if(!n||!e||!msg){alert('Please fill in all fields.');return;} const m=document.getElementById('contactSuccess'); m.style.display='block'; setTimeout(()=>m.style.display='none',6000); }<
+function scaleIframes() {
+  document.querySelectorAll('.iframe-wrap').forEach(wrap => {
+    const iframe = wrap.querySelector('iframe');
+    if (!iframe) return;
+    const scale = wrap.offsetWidth / 1440;
+    iframe.style.transform = `scale(${scale})`;
+    iframe.style.width  = wrap.offsetWidth / scale + 'px';
+    iframe.style.height = wrap.offsetHeight / scale + 'px';
+  });
+}
+window.addEventListener('load', scaleIframes);
+window.addEventListener('resize', scaleIframes);
+setTimeout(scaleIframes, 300);
+  /script>
 </body>
 </html>
