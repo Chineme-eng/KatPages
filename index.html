@@ -3,23 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kathrine Oduah — Landing Page Designer</title>
+  <title>Your Name — Landing Page Designer</title>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=Caveat:wght@500;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --cream: #f5f0e8;
-      --cream2: #ede7d5;
-      --paper: #faf7f2;
-      --ink: #1a1710;
-      --ink2: #3d3a30;
-      --muted: #8a8270;
-      --border: #d8d0bc;
-      --warm: #c9602a;
-      --warm2: #e8875a;
-      --sage: #5a7a5f;
-      --sky: #4a7a9b;
-      --highlight: #f7d87c;
+      --cream: #f5f0e8; --cream2: #ede7d5; --paper: #faf7f2;
+      --ink: #1a1710; --ink2: #3d3a30; --muted: #8a8270;
+      --border: #d8d0bc; --warm: #c9602a; --warm2: #e8875a;
+      --sage: #5a7a5f; --highlight: #f7d87c;
     }
     html { scroll-behavior: smooth; }
     body { background: var(--paper); color: var(--ink); font-family: 'DM Sans', sans-serif; font-weight: 300; overflow-x: hidden; }
@@ -58,41 +50,136 @@
     .btn-secondary:hover { border-color: var(--ink); color: var(--warm); transform: translateY(-2px); }
     .hero-trust { margin-top: 4rem; display: flex; align-items: center; gap: 1.5rem; font-size: 0.82rem; color: var(--muted); opacity: 0; animation: fadeUp 0.8s 0.7s forwards; flex-wrap: wrap; justify-content: center; }
     .trust-divider { width: 1px; height: 20px; background: var(--border); }
-    .trust-stars { color: var(--warm); }
 
-    /* SECTIONS */
+    /* SHARED SECTION */
     section { padding: 6rem 3rem; }
     .section-label { display: inline-block; font-family: 'Caveat', cursive; font-size: 1.1rem; font-weight: 500; color: var(--warm); margin-bottom: 0.5rem; }
     .section-title { font-family: 'Lora', serif; font-size: clamp(2rem, 4vw, 3rem); color: var(--ink); line-height: 1.15; margin-bottom: 1rem; }
     .section-title em { font-style: italic; }
     .section-sub { font-size: 1rem; color: var(--muted); max-width: 500px; line-height: 1.7; }
 
-    /* WORK */
+    /* ── WORK SHOWCASE ── */
     #work { background: var(--cream2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-    .work-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 3rem; flex-wrap: wrap; gap: 1rem; }
-    .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; }
-    .project-card { background: var(--paper); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; text-decoration: none; color: inherit; display: block; transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s; }
-    .project-card:hover { transform: translateY(-5px); box-shadow: 0 12px 40px rgba(26,23,16,0.1); border-color: var(--warm2); }
-    .project-thumb { width: 100%; height: 200px; position: relative; overflow: hidden; }
-    .project-thumb-inner { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-family: 'Lora', serif; font-style: italic; font-size: 1.1rem; transition: transform 0.5s; }
-    .project-card:hover .project-thumb-inner { transform: scale(1.05); }
-    .t1{background:linear-gradient(135deg,#1a0533,#4a0e8f,#7c3aed);color:rgba(255,255,255,0.25)}
-    .t2{background:linear-gradient(135deg,#0a2a1a,#0d5c36,#10b981);color:rgba(255,255,255,0.25)}
-    .t3{background:linear-gradient(135deg,#1a1200,#7a4f00,#f59e0b);color:rgba(255,255,255,0.25)}
-    .t4{background:linear-gradient(135deg,#0a1020,#0d2d5c,#3b82f6);color:rgba(255,255,255,0.25)}
-    .t5{background:linear-gradient(135deg,#1a0a0a,#6b1414,#ef4444);color:rgba(255,255,255,0.25)}
-    .project-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.35); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s; }
-    .project-card:hover .project-overlay { opacity: 1; }
-    .view-pill { background: var(--cream); color: var(--ink); padding: 0.45rem 1.2rem; border-radius: 50px; font-size: 0.8rem; font-weight: 500; }
-    .project-info { padding: 1.2rem 1.4rem 1.5rem; }
-    .project-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.6rem; }
-    .tag { font-size: 0.7rem; color: var(--muted); background: var(--cream2); border: 1px solid var(--border); padding: 0.2rem 0.6rem; border-radius: 50px; }
-    .project-name { font-family: 'Lora', serif; font-size: 1.2rem; color: var(--ink); margin-bottom: 0.3rem; }
-    .project-desc { font-size: 0.85rem; color: var(--muted); line-height: 1.6; }
-    .add-card { background: transparent; border: 2px dashed var(--border); border-radius: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 320px; gap: 0.8rem; color: var(--muted); transition: border-color 0.3s, color 0.3s; }
-    .add-card:hover { border-color: var(--warm2); color: var(--warm); }
-    .add-plus { font-size: 2rem; line-height: 1; }
-    .add-text { font-family: 'Caveat', cursive; font-size: 1.1rem; }
+    .work-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 3.5rem; flex-wrap: wrap; gap: 1rem; }
+
+    /* BIG GRID */
+    .showcase-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    /* FEATURED — spans full width */
+    .showcase-card {
+      background: var(--paper);
+      border: 1.5px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      transition: transform 0.35s, box-shadow 0.35s, border-color 0.35s;
+      position: relative;
+    }
+    .showcase-card:hover { transform: translateY(-6px); box-shadow: 0 20px 60px rgba(26,23,16,0.12); border-color: var(--warm2); }
+    .showcase-card.featured { grid-column: 1 / -1; }
+
+    .card-thumb {
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+    .showcase-card.featured .card-thumb { height: 520px; }
+    .showcase-card:not(.featured) .card-thumb { height: 300px; }
+
+    .thumb-frame {
+      width: 100%; height: 100%;
+      display: flex; align-items: center; justify-content: center;
+      transition: transform 0.6s;
+      position: relative;
+    }
+    .showcase-card:hover .thumb-frame { transform: scale(1.04); }
+
+    /* Each page's preview gradient theme */
+    .th-saas { background: linear-gradient(135deg, #070711 0%, #1a0a3a 40%, #4a1a9a 70%, #7c3aed 100%); }
+    .th-eco  { background: linear-gradient(135deg, #0d2410 0%, #1e4a1e 50%, #7bc47b 100%); }
+    .th-shop { background: linear-gradient(135deg, #1a1208 0%, #5c3a0a 40%, #b8860b 70%, #f0c060 100%); }
+    .th-app  { background: linear-gradient(135deg, #0a0f1e 0%, #1a3a6a 50%, #38bdf8 100%); }
+    .th-agcy { background: linear-gradient(135deg, #0d0d0a 0%, #3a0808 40%, #cc2200 80%, #e84a1a 100%); }
+    .th-food { background: linear-gradient(135deg, #1c0804 0%, #5a2010 40%, #c4622d 70%, #d4a030 100%); }
+    .th-fit  { background: linear-gradient(135deg, #0c0c0a 0%, #2a2a20 40%, #6a8a10 70%, #d4f060 100%); }
+
+    /* Mini browser chrome inside the thumb */
+    .browser-chrome {
+      position: absolute;
+      top: 1.5rem; left: 50%;
+      transform: translateX(-50%);
+      width: min(90%, 700px);
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 10px;
+      overflow: hidden;
+      backdrop-filter: blur(4px);
+    }
+    .bc-bar {
+      padding: 0.55rem 1rem;
+      background: rgba(0,0,0,0.3);
+      display: flex; align-items: center; gap: 0.5rem;
+    }
+    .bc-dot { width: 8px; height: 8px; border-radius: 50%; }
+    .bc-r { background: #ff5f57; } .bc-y { background: #febc2e; } .bc-g { background: #28c840; }
+    .bc-url { flex: 1; text-align: center; font-size: 0.65rem; color: rgba(255,255,255,0.35); font-family: monospace; }
+    .bc-body {
+      padding: 1.5rem 1.5rem 0;
+      min-height: 200px;
+      display: flex; flex-direction: column; gap: 0.8rem;
+    }
+    .featured .bc-body { min-height: 300px; padding: 2rem 2rem 0; }
+
+    /* Simulated page content inside mini browser */
+    .sim-nav { height: 28px; background: rgba(255,255,255,0.06); border-radius: 4px; display: flex; align-items: center; padding: 0 1rem; gap: 1rem; }
+    .sim-dot { width: 30px; height: 6px; border-radius: 3px; background: rgba(255,255,255,0.15); }
+    .sim-dot.wide { width: 60px; }
+    .sim-dot.short { width: 20px; }
+    .sim-hero-text { display: flex; flex-direction: column; gap: 0.6rem; padding: 1rem 0 0; }
+    .sim-line { height: 8px; border-radius: 4px; background: rgba(255,255,255,0.12); }
+    .sim-line.big { height: 14px; width: 70%; background: rgba(255,255,255,0.22); }
+    .sim-line.med { height: 10px; width: 55%; background: rgba(255,255,255,0.18); }
+    .sim-line.sm { width: 40%; }
+    .sim-btn { display: inline-block; width: 80px; height: 24px; border-radius: 4px; background: rgba(255,255,255,0.2); margin-top: 0.4rem; }
+    .sim-cards { display: flex; gap: 0.8rem; margin-top: 0.6rem; }
+    .sim-card { flex: 1; height: 60px; border-radius: 6px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.1); }
+
+    /* Overlay on hover */
+    .thumb-overlay {
+      position: absolute; inset: 0;
+      background: rgba(26,23,16,0.4);
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; transition: opacity 0.3s;
+    }
+    .showcase-card:hover .thumb-overlay { opacity: 1; }
+    .view-badge {
+      background: var(--cream);
+      color: var(--ink);
+      padding: 0.6rem 1.6rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      display: flex; align-items: center; gap: 0.5rem;
+      transform: translateY(8px); transition: transform 0.3s;
+    }
+    .showcase-card:hover .view-badge { transform: none; }
+
+    /* Card info */
+    .card-info { padding: 1.8rem 2rem 2rem; display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; }
+    .card-left {}
+    .card-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.6rem; }
+    .tag { font-size: 0.7rem; color: var(--muted); background: var(--cream2); border: 1px solid var(--border); padding: 0.2rem 0.7rem; border-radius: 50px; }
+    .card-name { font-family: 'Lora', serif; font-size: 1.5rem; color: var(--ink); margin-bottom: 0.3rem; }
+    .showcase-card:not(.featured) .card-name { font-size: 1.2rem; }
+    .card-desc { font-size: 0.88rem; color: var(--muted); line-height: 1.6; max-width: 500px; }
+    .card-arrow { color: var(--muted); font-size: 1.2rem; transition: color 0.2s, transform 0.2s; flex-shrink: 0; margin-top: 0.4rem; }
+    .showcase-card:hover .card-arrow { color: var(--warm); transform: translate(3px, -3px); }
 
     /* PRICING */
     #pricing { background: var(--paper); }
@@ -138,7 +225,7 @@
     .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
     .form-group.full { grid-column: 1 / -1; }
     .form-label { font-size: 0.78rem; font-weight: 500; color: var(--ink2); letter-spacing: 0.03em; }
-    .form-input, .form-select, .form-textarea { background: var(--cream2); border: 1.5px solid var(--border); border-radius: 8px; padding: 0.75rem 1rem; font-family: 'DM Sans', sans-serif; font-size: 0.88rem; color: var(--ink); outline: none; transition: border-color 0.2s, box-shadow 0.2s; width: 100%; appearance: none; -webkit-appearance: none; }
+    .form-input, .form-select, .form-textarea { background: var(--cream2); border: 1.5px solid var(--border); border-radius: 8px; padding: 0.75rem 1rem; font-family: 'DM Sans', sans-serif; font-size: 0.88rem; color: var(--ink); outline: none; transition: border-color 0.2s, box-shadow 0.2s; width: 100%; -webkit-appearance: none; }
     .form-input::placeholder, .form-textarea::placeholder { color: #c0b89e; }
     .form-input:focus, .form-select:focus, .form-textarea:focus { border-color: var(--warm); box-shadow: 0 0 0 3px rgba(201,96,42,0.1); }
     .form-select { cursor: pointer; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%238a8270' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; padding-right: 2.5rem; background-color: var(--cream2); }
@@ -202,19 +289,17 @@
     .footer-links a:hover { color: var(--warm2); }
     .footer-copy { font-size: 0.78rem; color: rgba(245,240,232,0.35); }
 
-    /* ANIMATIONS */
     @keyframes fadeUp { from{opacity:0;transform:translateY(18px)} to{opacity:1;transform:none} }
     .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.65s ease, transform 0.65s ease; }
     .reveal.visible { opacity: 1; transform: none; }
-    .reveal-d1 { transition-delay: 0.1s; }
-    .reveal-d2 { transition-delay: 0.2s; }
-    .reveal-d3 { transition-delay: 0.3s; }
+    .reveal-d1 { transition-delay: 0.1s; } .reveal-d2 { transition-delay: 0.2s; } .reveal-d3 { transition-delay: 0.3s; }
 
-    /* RESPONSIVE */
-    @media (max-width: 900px) {
+    @media (max-width: 960px) {
       nav { padding: 1rem 1.5rem; }
       section { padding: 4.5rem 1.5rem; }
       .hero { padding: 7rem 1.5rem 4rem; }
+      .showcase-grid { grid-template-columns: 1fr; }
+      .showcase-card.featured .card-thumb { height: 320px; }
       .book-inner, .about-inner, .contact-inner { grid-template-columns: 1fr; gap: 3rem; }
       .form-grid { grid-template-columns: 1fr; }
       .nav-links li:not(:last-child) { display: none; }
@@ -226,7 +311,7 @@
 <body>
 
 <nav id="nav">
-  <a href="#" class="nav-logo">Kathrine Oduah<span>.</span></a>
+  <a href="#" class="nav-logo">Your Name<span>.</span></a>
   <ul class="nav-links">
     <li><a href="#work">Work</a></li>
     <li><a href="#pricing">Pricing</a></li>
@@ -242,23 +327,18 @@
   <span class="hero-doodle doodle-2">made with ♥</span>
   <span class="hero-doodle doodle-3">fast & friendly</span>
   <span class="hero-doodle doodle-4">let's build!</span>
-
   <div class="hero-badge"><span class="badge-dot"></span> Open for new projects right now</div>
-
   <h1 class="hero-title">I build landing pages that <em>actually <span class="squiggle">work.</span></em></h1>
-
   <p class="hero-sub">No fluff, no jargon — just clean, beautiful pages designed to turn visitors into customers. Let's make something you're proud to share.</p>
-
   <div class="hero-actions">
     <a href="#book" class="btn-primary">Book a page <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     <a href="#work" class="btn-secondary">See my work</a>
   </div>
-
   <div class="hero-trust">
     <span style="color:var(--warm)">★★★★★</span>
     <span>5-star experience</span>
     <span class="trust-divider"></span>
-    <span>12+ pages shipped</span>
+    <span>7 pages live</span>
     <span class="trust-divider"></span>
     <span>Fast turnaround</span>
   </div>
@@ -273,28 +353,234 @@
     </div>
     <a href="#book" class="btn-secondary" style="font-size:0.88rem;padding:0.65rem 1.5rem">Want one like these?</a>
   </div>
-  <div class="projects-grid">
-    <a href="#" class="project-card reveal reveal-d1">
-      <div class="project-thumb"><div class="project-thumb-inner t1">your work here</div><div class="project-overlay"><span class="view-pill">View live ↗</span></div></div>
-      <div class="project-info"><div class="project-tags"><span class="tag">SaaS</span><span class="tag">Dark theme</span></div><div class="project-name">Project One</div><div class="project-desc">Bold SaaS product page with animated sections and strong CTAs.</div></div>
+
+  <div class="showcase-grid">
+
+    <!-- 1. FEATURED — SaaS -->
+    <a href="page-1-saas.html" target="_blank" class="showcase-card featured reveal">
+      <div class="card-thumb">
+        <div class="thumb-frame th-saas">
+          <div class="browser-chrome" style="width:min(88%,780px)">
+            <div class="bc-bar"><span class="bc-dot bc-r"></span><span class="bc-dot bc-y"></span><span class="bc-dot bc-g"></span><span class="bc-url">orbit.app</span></div>
+            <div class="bc-body">
+              <div class="sim-nav"><span class="sim-dot wide"></span><span class="sim-dot"></span><span class="sim-dot"></span><span class="sim-dot short"></span></div>
+              <div class="sim-hero-text">
+                <div class="sim-line big"></div>
+                <div class="sim-line med"></div>
+                <div class="sim-line" style="width:65%;background:rgba(168,85,247,0.4);height:18px"></div>
+                <div class="sim-line sm"></div>
+                <div style="display:flex;gap:0.6rem;margin-top:0.5rem"><div class="sim-btn" style="background:rgba(124,58,237,0.6)"></div><div class="sim-btn" style="width:60px;background:rgba(255,255,255,0.08)"></div></div>
+              </div>
+              <div class="sim-cards">
+                <div class="sim-card"></div><div class="sim-card"></div><div class="sim-card"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="thumb-overlay"><div class="view-badge">View live page ↗</div></div>
+      </div>
+      <div class="card-info">
+        <div class="card-left">
+          <div class="card-tags"><span class="tag">SaaS</span><span class="tag">Dark theme</span><span class="tag">Pricing</span></div>
+          <div class="card-name">Orbit — SaaS Platform</div>
+          <div class="card-desc">A bold developer-tools landing page with glowing accents, feature grid, and tiered pricing section. Built to convert signups.</div>
+        </div>
+        <span class="card-arrow">↗</span>
+      </div>
     </a>
-    <a href="#" class="project-card reveal reveal-d2">
-      <div class="project-thumb"><div class="project-thumb-inner t2">your work here</div><div class="project-overlay"><span class="view-pill">View live ↗</span></div></div>
-      <div class="project-info"><div class="project-tags"><span class="tag">Startup</span><span class="tag">Minimal</span></div><div class="project-name">Project Two</div><div class="project-desc">Clean startup page focused on storytelling and user trust.</div></div>
+
+    <!-- 2. Eco Startup -->
+    <a href="page-2-eco.html" target="_blank" class="showcase-card reveal reveal-d1">
+      <div class="card-thumb">
+        <div class="thumb-frame th-eco">
+          <div class="browser-chrome">
+            <div class="bc-bar"><span class="bc-dot bc-r"></span><span class="bc-dot bc-y"></span><span class="bc-dot bc-g"></span><span class="bc-url">verdant.co</span></div>
+            <div class="bc-body">
+              <div class="sim-hero-text">
+                <div class="sim-line" style="width:40%;height:6px;background:rgba(123,196,123,0.5)"></div>
+                <div class="sim-line big"></div>
+                <div class="sim-line med" style="background:rgba(255,255,255,0.15)"></div>
+                <div class="sim-line sm"></div>
+                <div class="sim-btn" style="background:rgba(13,36,16,0.8);border-radius:50px;width:100px"></div>
+              </div>
+              <div class="sim-cards" style="margin-top:1rem">
+                <div class="sim-card"></div><div class="sim-card"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="thumb-overlay"><div class="view-badge">View live page ↗</div></div>
+      </div>
+      <div class="card-info">
+        <div class="card-left">
+          <div class="card-tags"><span class="tag">Eco/Startup</span><span class="tag">Scroll reveals</span></div>
+          <div class="card-name">Verdant — Eco Brand</div>
+          <div class="card-desc">Sustainable lifestyle brand with editorial layout, hero product card, and mission statement section.</div>
+        </div>
+        <span class="card-arrow">↗</span>
+      </div>
     </a>
-    <a href="#" class="project-card reveal reveal-d3">
-      <div class="project-thumb"><div class="project-thumb-inner t3">your work here</div><div class="project-overlay"><span class="view-pill">View live ↗</span></div></div>
-      <div class="project-info"><div class="project-tags"><span class="tag">E-commerce</span><span class="tag">Warm</span></div><div class="project-name">Project Three</div><div class="project-desc">Premium product launch page with editorial feel and social proof.</div></div>
+
+    <!-- 3. E-commerce -->
+    <a href="page-3-ecommerce.html" target="_blank" class="showcase-card reveal reveal-d2">
+      <div class="card-thumb">
+        <div class="thumb-frame th-shop">
+          <div class="browser-chrome">
+            <div class="bc-bar"><span class="bc-dot bc-r"></span><span class="bc-dot bc-y"></span><span class="bc-dot bc-g"></span><span class="bc-url">aurum.store</span></div>
+            <div class="bc-body">
+              <div class="sim-hero-text">
+                <div class="sim-line" style="width:35%;height:5px;background:rgba(212,160,48,0.5)"></div>
+                <div class="sim-line big" style="background:rgba(255,255,255,0.2)"></div>
+                <div class="sim-line" style="width:75%;background:rgba(255,255,255,0.12)"></div>
+                <div class="sim-btn" style="background:rgba(26,18,8,0.7)"></div>
+              </div>
+              <div class="sim-cards" style="margin-top:1rem;gap:0.5rem">
+                <div class="sim-card" style="height:80px"></div><div class="sim-card" style="height:80px"></div><div class="sim-card" style="height:80px"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="thumb-overlay"><div class="view-badge">View live page ↗</div></div>
+      </div>
+      <div class="card-info">
+        <div class="card-left">
+          <div class="card-tags"><span class="tag">E-commerce</span><span class="tag">Luxury</span><span class="tag">Warm</span></div>
+          <div class="card-name">Aurum — Luxury Goods</div>
+          <div class="card-desc">Premium leather goods brand with split-screen hero, product grid, and brand story section.</div>
+        </div>
+        <span class="card-arrow">↗</span>
+      </div>
     </a>
-    <a href="#" class="project-card reveal reveal-d1">
-      <div class="project-thumb"><div class="project-thumb-inner t4">your work here</div><div class="project-overlay"><span class="view-pill">View live ↗</span></div></div>
-      <div class="project-info"><div class="project-tags"><span class="tag">App</span><span class="tag">Mobile-first</span></div><div class="project-name">Project Four</div><div class="project-desc">App landing page built for conversion with a mobile-first layout.</div></div>
+
+    <!-- 4. App -->
+    <a href="page-4-app.html" target="_blank" class="showcase-card reveal reveal-d1">
+      <div class="card-thumb">
+        <div class="thumb-frame th-app">
+          <div class="browser-chrome">
+            <div class="bc-bar"><span class="bc-dot bc-r"></span><span class="bc-dot bc-y"></span><span class="bc-dot bc-g"></span><span class="bc-url">pulse.app</span></div>
+            <div class="bc-body">
+              <div class="sim-hero-text" style="align-items:center;text-align:center">
+                <div class="sim-line big" style="margin:0 auto"></div>
+                <div class="sim-line" style="width:60%;background:rgba(255,255,255,0.1);margin:0 auto"></div>
+                <div style="display:flex;gap:0.5rem;justify-content:center;margin-top:0.4rem">
+                  <div class="sim-btn" style="background:rgba(37,99,235,0.7);border-radius:10px"></div>
+                  <div class="sim-btn" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);border-radius:10px;width:60px"></div>
+                </div>
+                <div style="width:120px;height:200px;background:rgba(10,15,30,0.7);border:1px solid rgba(37,99,235,0.4);border-radius:20px;margin:0.8rem auto 0;display:flex;align-items:center;justify-content:center;font-size:1.5rem">📱</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="thumb-overlay"><div class="view-badge">View live page ↗</div></div>
+      </div>
+      <div class="card-info">
+        <div class="card-left">
+          <div class="card-tags"><span class="tag">Mobile App</span><span class="tag">Fintech</span><span class="tag">Blue</span></div>
+          <div class="card-name">Pulse — Finance App</div>
+          <div class="card-desc">Mobile-first finance app landing page with phone mockup, feature cards, and dual app-store CTAs.</div>
+        </div>
+        <span class="card-arrow">↗</span>
+      </div>
     </a>
-    <a href="#" class="project-card reveal reveal-d2">
-      <div class="project-thumb"><div class="project-thumb-inner t5">your work here</div><div class="project-overlay"><span class="view-pill">View live ↗</span></div></div>
-      <div class="project-info"><div class="project-tags"><span class="tag">Agency</span><span class="tag">Bold</span></div><div class="project-name">Project Five</div><div class="project-desc">Creative agency homepage with dynamic layout and smooth transitions.</div></div>
+
+    <!-- 5. Agency -->
+    <a href="page-5-agency.html" target="_blank" class="showcase-card reveal reveal-d2">
+      <div class="card-thumb">
+        <div class="thumb-frame th-agcy">
+          <div class="browser-chrome">
+            <div class="bc-bar"><span class="bc-dot bc-r"></span><span class="bc-dot bc-y"></span><span class="bc-dot bc-g"></span><span class="bc-url">fluxstudio.co</span></div>
+            <div class="bc-body">
+              <div class="sim-hero-text">
+                <div class="sim-line" style="width:80%;height:28px;background:rgba(255,255,255,0.18)"></div>
+                <div class="sim-line" style="width:70%;height:28px;background:rgba(255,255,255,0.15)"></div>
+                <div class="sim-line" style="width:50%;height:28px;background:rgba(204,34,0,0.5)"></div>
+                <div class="sim-line" style="width:65%;height:28px;background:rgba(255,255,255,0.12)"></div>
+              </div>
+              <div style="height:8px;background:rgba(204,34,0,0.4);margin-top:0.8rem;border-radius:2px"></div>
+            </div>
+          </div>
+        </div>
+        <div class="thumb-overlay"><div class="view-badge">View live page ↗</div></div>
+      </div>
+      <div class="card-info">
+        <div class="card-left">
+          <div class="card-tags"><span class="tag">Agency</span><span class="tag">Bold/Brutal</span><span class="tag">Marquee</span></div>
+          <div class="card-name">Flux Studio — Agency</div>
+          <div class="card-desc">Oversized type, scrolling marquee, work grid hover effects, and a services list — pure editorial boldness.</div>
+        </div>
+        <span class="card-arrow">↗</span>
+      </div>
     </a>
-    <div class="add-card reveal reveal-d3"><span class="add-plus">+</span><span class="add-text">Your project here</span></div>
+
+    <!-- 6. Restaurant -->
+    <a href="page-6-restaurant.html" target="_blank" class="showcase-card reveal reveal-d1">
+      <div class="card-thumb">
+        <div class="thumb-frame th-food">
+          <div class="browser-chrome">
+            <div class="bc-bar"><span class="bc-dot bc-r"></span><span class="bc-dot bc-y"></span><span class="bc-dot bc-g"></span><span class="bc-url">misoandco.com</span></div>
+            <div class="bc-body">
+              <div class="sim-hero-text">
+                <div class="sim-line" style="width:40%;height:5px;background:rgba(212,160,48,0.6)"></div>
+                <div class="sim-line big"></div>
+                <div class="sim-line" style="width:80%;background:rgba(255,255,255,0.14)"></div>
+                <div style="display:flex;gap:0.6rem;margin-top:0.4rem">
+                  <div class="sim-btn" style="background:rgba(212,160,48,0.6);border-radius:4px"></div>
+                  <div class="sim-btn" style="width:70px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:4px"></div>
+                </div>
+              </div>
+              <div class="sim-cards" style="margin-top:0.8rem">
+                <div class="sim-card" style="height:50px"></div><div class="sim-card" style="height:50px"></div><div class="sim-card" style="height:50px"></div><div class="sim-card" style="height:50px"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="thumb-overlay"><div class="view-badge">View live page ↗</div></div>
+      </div>
+      <div class="card-info">
+        <div class="card-left">
+          <div class="card-tags"><span class="tag">Restaurant</span><span class="tag">Warm tones</span><span class="tag">Booking form</span></div>
+          <div class="card-name">Miso & Co. — Restaurant</div>
+          <div class="card-desc">Japanese dining page with full-bleed hero, menu preview cards, stat bar, and inline reservation form.</div>
+        </div>
+        <span class="card-arrow">↗</span>
+      </div>
+    </a>
+
+    <!-- 7. Fitness — featured -->
+    <a href="page-7-fitness.html" target="_blank" class="showcase-card featured reveal">
+      <div class="card-thumb">
+        <div class="thumb-frame th-fit">
+          <div class="browser-chrome" style="width:min(88%,780px)">
+            <div class="bc-bar"><span class="bc-dot bc-r"></span><span class="bc-dot bc-y"></span><span class="bc-dot bc-g"></span><span class="bc-url">formfitness.app</span></div>
+            <div class="bc-body" style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+              <div class="sim-hero-text">
+                <div class="sim-line" style="width:50%;height:5px;background:rgba(212,240,96,0.5)"></div>
+                <div class="sim-line" style="width:90%;height:30px;background:rgba(255,255,255,0.18)"></div>
+                <div class="sim-line" style="width:80%;height:30px;background:rgba(255,255,255,0.14)"></div>
+                <div class="sim-line" style="width:60%;height:30px;background:rgba(255,255,255,0.1)"></div>
+                <div class="sim-line" style="width:50%;height:30px;background:rgba(212,240,96,0.35)"></div>
+                <div class="sim-btn" style="background:rgba(212,240,96,0.6);width:120px;height:28px;border-radius:4px;margin-top:0.5rem"></div>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:0.6rem;padding-top:0.5rem">
+                <div style="height:55px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:8px"></div>
+                <div style="height:55px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:8px"></div>
+                <div style="height:55px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:8px"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="thumb-overlay"><div class="view-badge">View live page ↗</div></div>
+      </div>
+      <div class="card-info">
+        <div class="card-left">
+          <div class="card-tags"><span class="tag">Fitness</span><span class="tag">Bold type</span><span class="tag">Program cards</span><span class="tag">Lime accent</span></div>
+          <div class="card-name">Form — Fitness Platform</div>
+          <div class="card-desc">Split-screen hero with program cards, hover-invert feature grid, and a punchy lime-on-black CTA section. High energy, zero fluff.</div>
+        </div>
+        <span class="card-arrow">↗</span>
+      </div>
+    </a>
+
   </div>
 </section>
 
@@ -308,7 +594,7 @@
   <div class="pricing-grid">
     <div class="pricing-card reveal reveal-d1">
       <div class="plan-name">Starter</div>
-      <p class="plan-tagline">Perfect if you're just getting started or want to see how we work together.</p>
+      <p class="plan-tagline">Perfect if you're just getting started or want to test the waters.</p>
       <div class="plan-price"><span class="price-num">$0</span><span class="price-label">/ free forever</span></div>
       <hr class="plan-divider">
       <ul class="plan-features">
@@ -361,10 +647,10 @@
       <a href="#book" class="plan-btn">Book this plan</a>
     </div>
   </div>
-  <p style="text-align:center;margin-top:2rem;font-size:0.85rem;color:var(--muted)">Not sure which plan fits? <a href="#book" style="color:var(--warm);text-decoration:none;font-weight:500">Just tell me about your project →</a> I'll recommend the right one.</p>
+  <p style="text-align:center;margin-top:2rem;font-size:0.85rem;color:var(--muted)">Not sure which plan fits? <a href="#book" style="color:var(--warm);text-decoration:none;font-weight:500">Just tell me about your project →</a></p>
 </section>
 
-<!-- BOOK A PAGE -->
+<!-- BOOK -->
 <section id="book">
   <div class="book-inner">
     <div class="book-left reveal">
@@ -372,18 +658,9 @@
       <h2 class="section-title">Book a <em>page</em></h2>
       <p class="section-sub">Fill out the form and I'll get back to you within 24 hours. No commitment — just a conversation.</p>
       <div class="book-steps">
-        <div class="book-step">
-          <div class="step-num">1</div>
-          <div><div class="step-title">Tell me about your project</div><div class="step-desc">Share your idea, your audience, and your deadline.</div></div>
-        </div>
-        <div class="book-step">
-          <div class="step-num">2</div>
-          <div><div class="step-title">I'll reply with a plan</div><div class="step-desc">You'll hear back within 24 hours with a proposal and timeline.</div></div>
-        </div>
-        <div class="book-step">
-          <div class="step-num">3</div>
-          <div><div class="step-title">We build it together</div><div class="step-desc">Collaborate, give feedback, and get a page you love.</div></div>
-        </div>
+        <div class="book-step"><div class="step-num">1</div><div><div class="step-title">Tell me about your project</div><div class="step-desc">Share your idea, your audience, and your deadline.</div></div></div>
+        <div class="book-step"><div class="step-num">2</div><div><div class="step-title">I'll reply with a plan</div><div class="step-desc">You'll hear back within 24 hours with a proposal and timeline.</div></div></div>
+        <div class="book-step"><div class="step-num">3</div><div><div class="step-title">We build it together</div><div class="step-desc">Collaborate, give feedback, and get a page you love.</div></div></div>
       </div>
     </div>
     <div class="reveal reveal-d2">
@@ -394,13 +671,9 @@
           <div class="form-group"><label class="form-label" for="b-name">Your name</label><input id="b-name" class="form-input" type="text" placeholder="Alex Smith" /></div>
           <div class="form-group"><label class="form-label" for="b-email">Email address</label><input id="b-email" class="form-input" type="email" placeholder="alex@company.com" /></div>
           <div class="form-group full"><label class="form-label" for="b-project">What are you building?</label><input id="b-project" class="form-input" type="text" placeholder="e.g. landing page for my app, portfolio site, product launch..." /></div>
-          <div class="form-group"><label class="form-label" for="b-plan">Interested in</label>
-            <select id="b-plan" class="form-select"><option value="">Choose a plan...</option><option>Starter (Free)</option><option>Builder ($249)</option><option>Pro Launch ($549)</option><option>Not sure yet</option></select>
-          </div>
-          <div class="form-group"><label class="form-label" for="b-timeline">Ideal timeline</label>
-            <select id="b-timeline" class="form-select"><option value="">When do you need it?</option><option>ASAP (within a week)</option><option>2–3 weeks</option><option>1 month+</option><option>Just exploring</option></select>
-          </div>
-          <div class="form-group full"><label class="form-label" for="b-details">Anything else I should know?</label><textarea id="b-details" class="form-textarea" placeholder="Share any links, inspiration, or just describe what you're imagining. More detail = better result!"></textarea></div>
+          <div class="form-group"><label class="form-label" for="b-plan">Interested in</label><select id="b-plan" class="form-select"><option value="">Choose a plan...</option><option>Starter (Free)</option><option>Builder ($249)</option><option>Pro Launch ($549)</option><option>Not sure yet</option></select></div>
+          <div class="form-group"><label class="form-label" for="b-timeline">Ideal timeline</label><select id="b-timeline" class="form-select"><option value="">When do you need it?</option><option>ASAP (within a week)</option><option>2–3 weeks</option><option>1 month+</option><option>Just exploring</option></select></div>
+          <div class="form-group full"><label class="form-label" for="b-details">Anything else I should know?</label><textarea id="b-details" class="form-textarea" placeholder="Share links, inspiration, or describe what you're imagining..."></textarea></div>
         </div>
         <div class="form-submit-wrap">
           <button class="btn-primary" onclick="handleBook()">Send my request <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg></button>
@@ -426,7 +699,7 @@
       <span class="section-label">👋 about me</span>
       <h2 class="section-title">The person <em>behind the pages</em></h2>
       <div class="about-body">
-        <p>Hey! I'm <strong>Kathrine</strong> — a designer and developer who gets a little too excited about landing pages. I've spent the last few years learning what actually makes people click, stay, and come back.</p>
+        <p>Hey! I'm <strong>Your Name</strong> — a designer and developer who gets a little too excited about landing pages. I've spent the last few years learning what actually makes people click, stay, and come back.</p>
         <p>I started building pages for fun, then for friends, then for real clients — and realized I genuinely love helping people <span class="hl">launch their ideas online</span>. There's something satisfying about handing someone a page and watching them say "wait, that's actually good."</p>
         <p>I'm self-taught, detail-obsessed, and I respond fast. If you've got an idea you want to put on the internet, <strong>I'd love to help you do that.</strong></p>
       </div>
@@ -461,7 +734,7 @@
       <div class="faq-item reveal"><button class="faq-question" onclick="toggleFaq(this)">Do I own the code when it's done? <span class="faq-icon">+</span></button><div class="faq-answer">Absolutely. Once the project is complete, the code is 100% yours. You get the full source, you can host it wherever you want, and you can modify it freely. No strings attached.</div></div>
       <div class="faq-item reveal"><button class="faq-question" onclick="toggleFaq(this)">Why is the Starter plan free? What's the catch? <span class="faq-icon">+</span></button><div class="faq-answer">Honestly? No catch. It's free because I enjoy the work and it helps me build my portfolio. The free tier is simpler in scope, but it's a real, working page you can actually launch. If you need more, that's what the paid plans are for.</div></div>
       <div class="faq-item reveal"><button class="faq-question" onclick="toggleFaq(this)">Can I upgrade from Starter to Builder later? <span class="faq-icon">+</span></button><div class="faq-answer">Yes! Lots of people start free to see how we work together, then upgrade for a bigger project. I'll credit the work already done so you're not starting from scratch.</div></div>
-      <div class="faq-item reveal"><button class="faq-question" onclick="toggleFaq(this)">Do you work with people outside the US? <span class="faq-icon">+</span></button><div class="faq-answer">Definitely. I've worked with people across multiple time zones. Communication is mostly async (email + messages), so it works out well regardless of where you are.</div></div>
+      <div class="faq-item reveal"><button class="faq-question" onclick="toggleFaq(this)">Do you work with people outside the US? <span class="faq-icon">+</span></button><div class="faq-answer">Definitely. I've worked with people across multiple time zones. Communication is mostly async, so it works out well regardless of where you are.</div></div>
       <div class="faq-item reveal"><button class="faq-question" onclick="toggleFaq(this)">What if I don't love the final result? <span class="faq-icon">+</span></button><div class="faq-answer">Every plan includes revision rounds. I won't consider a project done until you're genuinely happy with it. If something's off, tell me specifically what you'd like changed and I'll fix it.</div></div>
     </div>
   </div>
@@ -474,23 +747,14 @@
       <span class="section-label">📬 get in touch</span>
       <h2 class="section-title">Say <em>hello!</em></h2>
       <p class="section-sub" style="margin-bottom:2rem">Not ready to book yet? Just want to chat? My inbox is always open.</p>
-      <a href="mailto:you@example.com" class="contact-card">
-        <div class="contact-icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div>
-        <div><div class="contact-info-label">Email</div><div class="contact-info-value">kathrineoduah@gmail.com</div></div>
-      </a>
-      <a href="https://github.com/yourusername" target="_blank" class="contact-card">
-        <div class="contact-icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg></div>
-        <div><div class="contact-info-label">GitHub</div><div class="contact-info-value">github.com/chineme-eng</div></div>
-      </a>
-      <a href="https://linkedin.com/in/yourusername" target="_blank" class="contact-card">
-        <div class="contact-icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></div>
-        <div><div class="contact-info-label">LinkedIn</div><div class="contact-info-value">linkedin.com/in/katoduah</div></div>
-      </a>
+      <a href="mailto:you@example.com" class="contact-card"><div class="contact-icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div><div><div class="contact-info-label">Email</div><div class="contact-info-value">you@example.com</div></div></a>
+      <a href="https://github.com/yourusername" target="_blank" class="contact-card"><div class="contact-icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg></div><div><div class="contact-info-label">GitHub</div><div class="contact-info-value">github.com/yourusername</div></div></a>
+      <a href="https://linkedin.com/in/yourusername" target="_blank" class="contact-card"><div class="contact-icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></div><div><div class="contact-info-label">LinkedIn</div><div class="contact-info-value">linkedin.com/in/yourusername</div></div></a>
     </div>
     <div class="reveal reveal-d2">
       <div class="contact-form-wrap">
         <div class="form-title">Drop me a message</div>
-        <p class="form-subtitle" style="margin-bottom:1.5rem">Quick question, idea, or just want to say hi? Go for it.</p>
+        <p style="font-size:0.85rem;color:var(--muted);margin-bottom:1.5rem;line-height:1.5">Quick question, idea, or just want to say hi? Go for it.</p>
         <div class="form-grid" style="margin-bottom:1rem">
           <div class="form-group"><label class="form-label" for="c-name">Name</label><input id="c-name" class="form-input" type="text" placeholder="Your name" /></div>
           <div class="form-group"><label class="form-label" for="c-email">Email</label><input id="c-email" class="form-input" type="email" placeholder="you@email.com" /></div>
@@ -504,55 +768,19 @@
 </section>
 
 <footer>
-  <div>
-    <div class="footer-logo">Kathrine Oduah.</div>
-    <div class="footer-tagline">Building pages people love.</div>
-  </div>
-  <div class="footer-links">
-    <a href="#work">Work</a>
-    <a href="#pricing">Pricing</a>
-    <a href="#book">Book a page</a>
-    <a href="#faq">FAQ</a>
-    <a href="#contact">Contact</a>
-  </div>
-  <div class="footer-copy">© 2026 Kathrine Oduah. Made with care.</div>
+  <div><div class="footer-logo">Your Name.</div><div class="footer-tagline">Building pages people love.</div></div>
+  <div class="footer-links"><a href="#work">Work</a><a href="#pricing">Pricing</a><a href="#book">Book a page</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></div>
+  <div class="footer-copy">© 2026 Your Name. Made with care.</div>
 </footer>
 
 <script>
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40));
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } });
-  }, { threshold: 0.08 });
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-  function toggleFaq(btn) {
-    const item = btn.closest('.faq-item');
-    const wasOpen = item.classList.contains('open');
-    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-    if (!wasOpen) item.classList.add('open');
-  }
-
-  function handleBook() {
-    const n = document.getElementById('b-name').value.trim();
-    const e = document.getElementById('b-email').value.trim();
-    const p = document.getElementById('b-project').value.trim();
-    if (!n || !e || !p) { alert('Please fill in your name, email, and project description.'); return; }
-    const m = document.getElementById('bookSuccess');
-    m.style.display = 'block';
-    setTimeout(() => m.style.display = 'none', 6000);
-  }
-
-  function handleContact() {
-    const n = document.getElementById('c-name').value.trim();
-    const e = document.getElementById('c-email').value.trim();
-    const msg = document.getElementById('c-msg').value.trim();
-    if (!n || !e || !msg) { alert('Please fill in all fields.'); return; }
-    const m = document.getElementById('contactSuccess');
-    m.style.display = 'block';
-    setTimeout(() => m.style.display = 'none', 6000);
-  }
+  const obs = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } }); }, { threshold: 0.06 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  function toggleFaq(btn) { const item = btn.closest('.faq-item'); const wasOpen = item.classList.contains('open'); document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open')); if (!wasOpen) item.classList.add('open'); }
+  function handleBook() { const n=document.getElementById('b-name').value.trim(),e=document.getElementById('b-email').value.trim(),p=document.getElementById('b-project').value.trim(); if(!n||!e||!p){alert('Please fill in your name, email, and project description.');return;} const m=document.getElementById('bookSuccess'); m.style.display='block'; setTimeout(()=>m.style.display='none',6000); }
+  function handleContact() { const n=document.getElementById('c-name').value.trim(),e=document.getElementById('c-email').value.trim(),msg=document.getElementById('c-msg').value.trim(); if(!n||!e||!msg){alert('Please fill in all fields.');return;} const m=document.getElementById('contactSuccess'); m.style.display='block'; setTimeout(()=>m.style.display='none',6000); }
 </script>
 </body>
 </html>
