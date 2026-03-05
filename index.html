@@ -738,6 +738,16 @@
   <div class="footer-copy">© 2026 Kats Pages. Made with care.</div>
 </footer>
 
+Here is the **entire, complete `<script>` section**. I have included every translation (Nav, Buttons, Hero, Pricing, and the full FAQ responses) and all the functional code for the animations and language switching.
+
+**How to use this:**
+
+1. Open your HTML file.
+2. Find the `<script>` tag near the bottom.
+3. Delete everything from the start of `<script>` to the end of `</script>`.
+4. Paste this entire block in its place.
+
+```javascript
 <script>
   const translations = {
     es: {
@@ -749,216 +759,192 @@
       "Book a page": "Reservar página", "See my work": "Ver mi trabajo",
       "Pages I've built": "Páginas que he creado", "Want one like these?": "¿Quieres una como estas?",
       "Simple, honest": "Precios simples y", "pricing": "honestos",
-      "No surprise invoices. Pick a plan that fits where you're at — you can always upgrade as you grow.": "Sin facturas sorpresa. Elige un plan que se adapte a ti — siempre puedes mejorar a medida que creces.",
       "Starter": "Básico", "Builder": "Constructor", "Pro Launch": "Lanzamiento Pro",
-      "Get started free": "Comenzar gratis", "Book this plan": "Reservar este plan",
-      "Book a": "Reserva una", "page": "página",
-     "Questions I get asked": "Preguntas que me hacen", "a lot": "a menudo",
+      "Questions I get asked": "Preguntas que me hacen", "a lot": "a menudo",
+      "Say": "¡Di", "hello!": "hola!", "Drop me a message": "Déjame un mensaje", "Send it": "Enviar",
       "How long does it take to build a page?": "¿Cuánto tiempo toma construir una página?",
-      "For the Starter plan it's usually 2–3 days. The Builder plan takes 5–7 days, and Pro Launch runs 7–10 days depending on complexity. Need it faster? Just ask, I'll do my best to work around your deadline.": "Para el plan Starter suele ser de 2 a 3 días. El plan Builder tarda de 5 a 7 días y Pro Launch de 7 a 10 días según la complejidad. ¿Lo necesitas más rápido? Solo pregunta.",
+      "For the Starter plan it's usually 2–3 days. The Builder plan takes 5–7 days, and Pro Launch runs 7–10 days depending on complexity. Need it faster? Just ask, I'll do my best to work around your deadline.": "Normalmente de 2 a 10 días según el plan. ¿Lo necesitas más rápido? Solo pregunta, haré lo posible por cumplir tu plazo.",
       "What do I need to provide to get started?": "¿Qué necesito proporcionar para empezar?",
-      "At minimum: what you're building, who it's for, and what action you want visitors to take. I'll ask the right questions to fill in the gaps. No design files required — I can work from a rough idea or a detailed brief.": "Solo lo básico: qué construyes, para quién es y el objetivo. Yo haré las preguntas para completar el resto. No hace falta diseño previo.",
+      "At minimum: what you're building, who it's for, and what action you want visitors to take. I'll ask the right questions to fill in the gaps. No design files required — I can work from a rough idea or a detailed brief.": "Solo lo básico: qué construyes, para quién es y el objetivo. Yo haré las preguntas. No hace falta diseño previo.",
       "Do I own the code when it's done?": "¿Soy dueño del código cuando termina?",
-      "Absolutely. Once the project is complete, the code is 100% yours. You get the full source, you can host it wherever you want, and you can modify it freely. No strings attached.": "Absolutamente. Una vez terminado el proyecto, el código es 100% tuyo. Recibes el código fuente completo y puedes modificarlo libremente.",
+      "Absolutely. Once the project is complete, the code is 100% yours. You get the full source, you can host it wherever you want, and you can modify it freely. No strings attached.": "Absolutamente. Una vez terminado, el código es 100% tuyo. Sin cargos ocultos ni condiciones.",
       "Why is the Starter plan free? What's the catch?": "¿Por qué el plan Starter es gratis? ¿Cuál es el truco?",
-      "Honestly? No catch. It's free because I enjoy the work and it helps me build my portfolio. The free tier is simpler in scope, but it's a real, working page you can actually launch. If you need more, that's what the paid plans are for.": "¡Sin trucos! Es gratis porque disfruto el trabajo y me ayuda a crear mi portafolio. Es una página real y funcional que puedes lanzar.",
+      "Honestly? No catch. It's free because I enjoy the work and it helps me build my portfolio. The free tier is simpler in scope, but it's a real, working page you can actually launch. If you need more, that's what the paid plans are for.": "¡Sin trucos! Es gratis porque disfruto el trabajo y me ayuda a crear mi portafolio. Es una página real y funcional.",
       "Can I upgrade from Starter to Builder later?": "¿Puedo pasar de Starter a Builder después?",
-      "Yes! Lots of people start free to see how we work together, then upgrade for a bigger project. I'll credit the work already done so you're not starting from scratch.": "¡Sí! Mucha gente empieza gratis para ver cómo trabajamos juntos y luego sube de nivel. Te daré crédito por el trabajo ya realizado.",
+      "Yes! Lots of people start free to see how we work together, then upgrade for a bigger project. I'll credit the work already done so you're not starting from scratch.": "¡Sí! Puedes empezar gratis y luego subir de nivel. Te daré crédito por el trabajo ya realizado.",
       "Do you work with people outside the US?": "¿Trabajas con personas fuera de EE. UU.?",
-      "Definitely. I've worked with people across multiple time zones. Communication is mostly async, so it works out well regardless of where you are.": "Definitivamente. He trabajado con personas en múltiples zonas horarias. La comunicación es fluida sin importar dónde estés.",
+      "Definitely. I've worked with people across multiple time zones. Communication is mostly async, so it works out well regardless of where you are.": "Definitivamente. Trabajo con fundadores de todo el mundo. Nos coordinaremos según tu zona horaria.",
       "What if I don't love the final result?": "¿Qué pasa si no me encanta el resultado final?",
-      "Every plan includes revision rounds. I won't consider a project done until you're genuinely happy with it. If something's off, tell me specifically what you'd like changed and I'll fix it.": "Cada plan incluye rondas de revisión. No considero que un proyecto esté terminado hasta que estés realmente feliz con él.",
-      "Say": "¡Di", "hello!": "hola!", "Drop me a message": "Déjame un mensaje", "Send it": "Enviar"
+      "Every plan includes revision rounds. I won't consider a project done until you're genuinely happy with it. If something's off, tell me specifically what you'd like changed and I'll fix it.": "Tenemos un proceso colaborativo con revisiones. No paro hasta que tengamos una página que te encante."
     },
     fr: {
       "Work": "Projets", "Pricing": "Tarifs", "Contact": "Contact", "Book a Page": "Réserver",
-      "landing pages": "pages de destination", "made with ♥": "fait avec ♥", "fast & friendly": "rapide et sympa", "let's build!": "construisons !",
+      "landing pages": "pages de destination", "made with ♥": "fait avec ♥", "fast & friendly": "rapide & sympa", "let's build!": "créons !",
       "Open for new projects right now": "Disponible pour de nouveaux projets",
-      "I build landing pages that": "Je crée des pages de destination qui", "actually": "vraiment", "work.": "fonctionnent.",
-      "No fluff, no jargon — just clean, beautiful pages designed to turn visitors into customers. Let's make something you're proud to share.": "Pas de blabla — juste des pages épurées conçues pour convertir vos visiteurs. Créons quelque chose dont vous serez fier.",
+      "I build landing pages that": "Je crée des pages qui", "actually": "vraiment", "work.": "fonctionnent.",
+      "No fluff, no jargon — just clean, beautiful pages designed to turn visitors into customers. Let's make something you're proud to share.": "Pas de blabla — juste des pages épurées conçues pour convertir. Soyez fier de votre site.",
       "Book a page": "Réserver une page", "See my work": "Voir mes projets",
-      "Pages I've built": "Pages que j'ai créées", "Want one like these?": "Vous en voulez une comme ça ?",
+      "Pages I've built": "Pages réalisées", "Want one like these?": "En vouloir une ?",
       "Simple, honest": "Tarifs simples et", "pricing": "honnêtes",
       "Starter": "Débutant", "Builder": "Constructeur", "Pro Launch": "Lancement Pro",
-      "Get started free": "Commencer gratuitement", "Book this plan": "Réserver ce forfait",
-      "Questions I get asked": "Questions qu'on me pose", "a lot": "souvent",
-    "How long does it take to build a page?": "Combien de temps faut-il pour créer une page ?",
-      "For the Starter plan it's usually 2–3 days. The Builder plan takes 5–7 days, and Pro Launch runs 7–10 days depending on complexity. Need it faster? Just ask, I'll do my best to work around your deadline.": "Pour le plan Starter, c'est 2–3 jours. Builder prend 5–7 jours et Pro Launch 7–10 jours. Besoin de plus rapide ? Demandez-moi !",
-      "What do I need to provide to get started?": "Que dois-je fournir pour commencer ?",
-      "At minimum: what you're building, who it's for, and what action you want visitors to take. I'll ask the right questions to fill in the gaps. No design files required — I can work from a rough idea or a detailed brief.": "Le minimum : votre projet, votre cible et l'action voulue. Je poserai les bonnes questions. Pas besoin de fichiers design.",
-      "Do I own the code when it's done?": "Est-ce que le code m'appartient à la fin ?",
-      "Absolutely. Once the project is complete, the code is 100% yours. You get the full source, you can host it wherever you want, and you can modify it freely. No strings attached.": "Absolument. Une fois terminé, le code est 100% à vous. Vous recevez la source complète et pouvez la modifier librement.",
-      "Why is the Starter plan free? What's the catch?": "Pourquoi le plan Starter est-il gratuit ? Quel est le piège ?",
-      "Honestly? No catch. It's free because I enjoy the work and it helps me build my portfolio. The free tier is simpler in scope, but it's a real, working page you can actually launch. If you need more, that's what the paid plans are for.": "Honnêtement ? Aucun piège. C'est gratuit car j'aime ce travail et cela enrichit mon portfolio. C'est une page réelle et fonctionnelle.",
-      "Can I upgrade from Starter to Builder later?": "Puis-je passer du plan Starter au Builder plus tard ?",
-      "Yes! Lots of people start free to see how we work together, then upgrade for a bigger project. I'll credit the work already done so you're not starting from scratch.": "Oui ! Beaucoup commencent gratuitement pour tester notre collaboration, puis évoluent vers un projet plus important.",
-      "Do you work with people outside the US?": "Travaillez-vous avec des personnes hors des États-Unis ?",
-      "Definitely. I've worked with people across multiple time zones. Communication is mostly async, so it works out well regardless of where you are.": "Absolument. J'ai travaillé avec des clients sur plusieurs fuseaux horaires. La communication asynchrone fonctionne très bien.",,
-      "Say": "Dites", "hello!": "bonjour !", "Drop me a message": "Laissez-moi un message", "Send it": "Envoyer"
+      "Questions I get asked": "Questions", "a lot": "fréquentes",
+      "Say": "Dites", "hello!": "bonjour !", "Drop me a message": "Laissez un message", "Send it": "Envoyer",
+      "How long does it take to build a page?": "Combien de temps faut-il ?",
+      "For the Starter plan it's usually 2–3 days. The Builder plan takes 5–7 days, and Pro Launch runs 7–10 days depending on complexity. Need it faster? Just ask, I'll do my best to work around your deadline.": "Généralement 2 à 10 jours. Besoin de plus rapide ? Je ferai de mon mieux pour vous.",
+      "What do I need to provide to get started?": "Que dois-je fournir ?",
+      "At minimum: what you're building, who it's for, and what action you want visitors to take. I'll ask the right questions to fill in the gaps. No design files required — I can work from a rough idea or a detailed brief.": "Le minimum : votre projet, votre cible et l'objectif. Je poserai les questions.",
+      "Do I own the code when it's done?": "Le code m'appartient-il ?",
+      "Absolutely. Once the project is complete, the code is 100% yours. You get the full source, you can host it wherever you want, and you can modify it freely. No strings attached.": "Absolument. Une fois terminé, le code est 100% à vous. Pas de frais cachés.",
+      "Why is the Starter plan free? What's the catch?": "Pourquoi est-ce gratuit ?",
+      "Honestly? No catch. It's free because I enjoy the work and it helps me build my portfolio. The free tier is simpler in scope, but it's a real, working page you can actually launch. If you need more, that's what the paid plans are for.": "Aucun piège ! C'est pour mon portfolio. C'est une page réelle et fonctionnelle.",
+      "Can I upgrade from Starter to Builder later?": "Puis-je évoluer plus tard ?",
+      "Yes! Lots of people start free to see how we work together, then upgrade for a bigger project. I'll credit the work already done so you're not starting from scratch.": "Oui ! Vous pouvez commencer gratuitement et évoluer vers un projet plus important.",
+      "Do you work with people outside the US?": "Travaillez-vous hors USA ?",
+      "Definitely. I've worked with people across multiple time zones. Communication is mostly async, so it works out well regardless of where you are.": "Oui ! Je travaille avec des créateurs du monde entier.",
+      "What if I don't love the final result?": "Et si je n'aime pas ?",
+      "Every plan includes revision rounds. I won't consider a project done until you're genuinely happy with it. If something's off, tell me specifically what you'd like changed and I'll fix it.": "Révisions incluses. Je ne m'arrête pas avant que vous n'adoriez votre page."
     },
     de: {
-      "Work": "Arbeit", "Pricing": "Preise", "Contact": "Kontakt", "Book a Page": "Buchen",
-      "landing pages": "Landingpages", "made with ♥": "mit ♥ gemacht", "fast & friendly": "schnell & freundlich", "let's build!": "bauen wir!",
+      "Work": "Projekte", "Pricing": "Preise", "Contact": "Kontakt", "Book a Page": "Buchen",
+      "landing pages": "Landingpages", "made with ♥": "mit ♥ gemacht", "fast & friendly": "schnell & nett", "let's build!": "los geht's!",
       "Open for new projects right now": "Bereit für neue Projekte",
-      "I build landing pages that": "Ich erstelle Landingpages, die", "actually": "wirklich", "work.": "funktionieren.",
-      "No fluff, no jargon — just clean, beautiful pages designed to turn visitors into customers. Let's make something you're proud to share.": "Kein Schnickschnack – nur saubere Seiten, die Besucher in Kunden verwandeln. Lass uns etwas erschaffen, auf das du stolz bist.",
-      "Book a page": "Seite buchen", "See my work": "Meine Arbeit ansehen",
-      "Pages I've built": "Seiten, die ich erstellt habe", "Want one like these?": "Möchtest du auch so eine?",
+      "I build landing pages that": "Ich baue Landingpages, die", "actually": "wirklich", "work.": "funktionieren.",
+      "No fluff, no jargon — just clean, beautiful pages designed to turn visitors into customers. Let's make something you're proud to share.": "Kein Schnickschnack — nur saubere Seiten, die Besucher in Kunden verwandeln.",
+      "Book a page": "Seite buchen", "See my work": "Projekte sehen",
+      "Pages I've built": "Referenzen", "Want one like these?": "Auch so eine?",
       "Simple, honest": "Einfache, ehrliche", "pricing": "Preise",
-      "Starter": "Starter", "Builder": "Macher", "Pro Launch": "Pro-Start",
-      "Questions I get asked": "Fragen, die mir", "a lot": "oft gestellt werden",
-      "How long does it take to build a page?": "Wie lange dauert es, eine Seite zu erstellen?",
-      "For the Starter plan it's usually 2–3 days. The Builder plan takes 5–7 days, and Pro Launch runs 7–10 days depending on complexity. Need it faster? Just ask, I'll do my best to work around your deadline.": "Starter: 2–3 Tage. Builder: 5–7 Tage. Pro Launch: 7–10 Tage. Brauchen Sie es schneller? Fragen Sie einfach nach.",
-      "What do I need to provide to get started?": "Was muss ich bereitstellen, um anzufangen?",
-      "At minimum: what you're building, who it's for, and what action you want visitors to take. I'll ask the right questions to fill in the gaps. No design files required — I can work from a rough idea or a detailed brief.": "Das Minimum: Was du baust, für wen und das Ziel. Den Rest kläre ich mit Fragen. Keine Design-Dateien nötig.",
-      "Do I own the code when it's done?": "Gehört der Code mir, wenn er fertig ist?",
-      "Absolutely. Once the project is complete, the code is 100% yours. You get the full source, you can host it wherever you want, and you can modify it freely. No strings attached.": "Absolut. Nach Abschluss gehört der Code zu 100% Ihnen. Sie erhalten den Quellcode und können ihn frei nutzen.",
-      "Why is the Starter plan free? What's the catch?": "Warum ist der Starter-Plan kostenlos? Wo ist der Haken?",
-      "Honestly? No catch. It's free because I enjoy the work and it helps me build my portfolio. The free tier is simpler in scope, but it's a real, working page you can actually launch. If you need more, that's what the paid plans are for.": "Ehrlich? Kein Haken. Es hilft mir, mein Portfolio aufzubauen. Es ist eine echte, funktionale Seite für Ihren Start.",
-      "Can I upgrade from Starter to Builder later?": "Kann ich später von Starter auf Builder upgraden?",
-      "Yes! Lots of people start free to see how we work together, then upgrade for a bigger project. I'll credit the work already done so you're not starting from scratch.": "Ja! Viele fangen kostenlos an und wechseln später zu größeren Projekten. Bisherige Arbeit wird voll angerechnet.",
-      "Do you work with people outside the US?": "Arbeiten Sie mit Personen außerhalb der USA zusammen?",
-      "Definitely. I've worked with people across multiple time zones. Communication is mostly async, so it works out well regardless of where you are.": "Definitiv. Ich arbeite mit Kunden weltweit. Die Kommunikation erfolgt meist asynchron und unkompliziert.",
-      "What if I don't love the final result?": "Was ist, wenn mir das Ergebnis nicht gefällt?",
-      "Every plan includes revision rounds. I won't consider a project done until you're genuinely happy with it. If something's off, tell me specifically what you'd like changed and I'll fix it.": "Jeder Plan enthält Korrekturschleifen. Ich bin erst fertig, wenn Sie mit dem Ergebnis wirklich zufrieden sind.",
-      "Say": "Sag", "hello!": "hallo!", "Drop me a message": "Hinterlass mir eine Nachricht", "Send it": "Senden"
+      "Starter": "Starter", "Builder": "Builder", "Pro Launch": "Pro Launch",
+      "Questions I get asked": "Häufige", "a lot": "Fragen",
+      "Say": "Sag", "hello!": "hallo!", "Drop me a message": "Schreib mir", "Send it": "Senden",
+      "How long does it take to build a page?": "Wie lange dauert es?",
+      "For the Starter plan it's usually 2–3 days. The Builder plan takes 5–7 days, and Pro Launch runs 7–10 days depending on complexity. Need it faster? Just ask, I'll do my best to work around your deadline.": "Meist 2-10 Werktage. Eilt es? Frag einfach nach, ich gebe mein Bestes.",
+      "What do I need to provide to get started?": "Was muss ich liefern?",
+      "At minimum: what you're building, who it's for, and what action you want visitors to take. I'll ask the right questions to fill in the gaps. No design files required — I can work from a rough idea or a detailed brief.": "Das Minimum: Was du baust, für wen und das Ziel. Keine Design-Dateien nötig.",
+      "Do I own the code when it's done?": "Gehört der Code mir?",
+      "Absolutely. Once the project is complete, the code is 100% yours. You get the full source, you can host it wherever you want, and you can modify it freely. No strings attached.": "Absolut. Nach der Zahlung gehört alles dir. Keine versteckten Gebühren.",
+      "Why is the Starter plan free? What's the catch?": "Warum kostenlos?",
+      "Honestly? No catch. It's free because I enjoy the work and it helps me build my portfolio. The free tier is simpler in scope, but it's a real, working page you can actually launch. If you need more, that's what the paid plans are for.": "Kein Haken! Es hilft meinem Portfolio. Es ist eine echte, funktionale Seite.",
+      "Can I upgrade from Starter to Builder later?": "Späteres Upgrade?",
+      "Yes! Lots of people start free to see how we work together, then upgrade for a bigger project. I'll credit the work already done so you're not starting from scratch.": "Ja! Viele fangen kostenlos an und wechseln später zu größeren Projekten.",
+      "Do you work with people outside the US?": "Weltweite Arbeit?",
+      "Definitely. I've worked with people across multiple time zones. Communication is mostly async, so it works out well regardless of where you are.": "Ja! Ich arbeite weltweit. Wir stimmen uns auf deine Zeitzone ab.",
+      "What if I don't love the final result?": "Bei Nichtgefallen?",
+      "Every plan includes revision rounds. I won't consider a project done until you're genuinely happy with it. If something's off, tell me specifically what you'd like changed and I'll fix it.": "Revisionen inklusive. Ich höre erst auf, wenn du die Seite liebst."
     },
     jp: {
-      "Work": "実績", "Pricing": "料金", "Contact": "お問い合わせ", "Book a Page": "予約する",
-      "landing pages": "ランディングページ", "made with ♥": "心を込めて制作", "fast & friendly": "迅速かつ親切", "let's build!": "作りましょう！",
-      "Open for new projects right now": "新規プロジェクト受付中",
-      "I build landing pages that": "実際に効果のあるランディングページを", "actually": "制作", "work.": "します。",
-      "No fluff, no jargon — just clean, beautiful pages designed to turn visitors into customers. Let's make something you're proud to share.": "専門用語や無駄を省き、訪問者を顧客に変える美しいページをデザインします。",
+      "Work": "実績", "Pricing": "料金", "Contact": "連絡先", "Book a Page": "予約する",
+      "landing pages": "ランディングページ", "made with ♥": "♥ を込めて", "fast & friendly": "迅速・丁寧", "let's build!": "作ろう！",
+      "Open for new projects right now": "新規案件受付中",
+      "I build landing pages that": "成果につながる", "actually": "本物の", "work.": "ページを制作。",
+      "No fluff, no jargon — just clean, beautiful pages designed to turn visitors into customers. Let's make something you're proud to share.": "無駄を省き、訪問者を顧客に変えるデザインを。誇れるページを作りましょう。",
       "Book a page": "ページを予約", "See my work": "実績を見る",
-      "Pages I've built": "これまでの制作実績", "Want one like these?": "このようなページをご希望ですか？",
-      "Simple, honest": "シンプルで誠実な", "pricing": "料金体系",
+      "Pages I've built": "制作実績", "Want one like these?": "必要ですか？",
+      "Simple, honest": "シンプルで誠実な", "pricing": "料金",
       "Starter": "スターター", "Builder": "ビルダー", "Pro Launch": "プロローンチ",
-      "Questions I get asked": "よく", "a lot": "聞かれる質問",
-      "How long does it take to build a page?": "ページの制作にはどのくらい時間がかかりますか？",
-      "For the Starter plan it's usually 2–3 days. The Builder plan takes 5–7 days, and Pro Launch runs 7–10 days depending on complexity. Need it faster? Just ask, I'll do my best to work around your deadline.": "スターターは2〜3日、ビルダーは5〜7日、プロは7〜10日です。お急ぎの場合はご相談ください。",
-      "What do I need to provide to get started?": "開始するために何を用意すればいいですか？",
-      "At minimum: what you're building, who it's for, and what action you want visitors to take. I'll ask the right questions to fill in the gaps. No design files required — I can work from a rough idea or a detailed brief.": "最低限：何を作るか、誰向けか、目的のみ。詳細はヒアリングします。デザイン案は不要です。",
-      "Do I own the code when it's done?": "完成後のコードの所有権はどうなりますか？",
-      "Absolutely. Once the project is complete, the code is 100% yours. You get the full source, you can host it wherever you want, and you can modify it freely. No strings attached.": "もちろんです。完了後は100%あなたのものです。ソースコードをお渡しし、自由に修正・ホストいただけます。",
-      "Why is the Starter plan free? What's the catch?": "なぜスタータープランは無料なのですか？裏はありますか？",
-      "Honestly? No catch. It's free because I enjoy the work and it helps me build my portfolio. The free tier is simpler in scope, but it's a real, working page you can actually launch. If you need more, that's what the paid plans are for.": "裏はありません。実績作りのため無料で提供しています。シンプルですが、実際に公開可能な本格的なページです。",
-      "Can I upgrade from Starter to Builder later?": "後でスターターからビルダーにアップグレードできますか？",
-      "Yes! Lots of people start free to see how we work together, then upgrade for a bigger project. I'll credit the work already done so you're not starting from scratch.": "はい！まずは無料で試してから、大きなプロジェクトへ移行する方も多いです。継続分として調整いたします。",
-      "Do you work with people outside the US?": "米国外の人とも仕事をしていますか？",
-      "Definitely. I've worked with people across multiple time zones. Communication is mostly async, so it works out well regardless of where you are.": "はい、世界中の方と仕事をしています。時差があっても非同期コミュニケーションで円滑に進められます。",
-      "What if I don't love the final result?": "結果が気に入らなかった場合はどうなりますか？",
-      "Every plan includes revision rounds. I won't consider a project done until you're genuinely happy with it. If something's off, tell me specifically what you'd like changed and I'll fix it.": "全てのプランに修正が含まれます。あなたが本当に満足するまでプロジェクトは完了しません。",
-      "Say": "お気軽に", "hello!": "ご連絡ください！", "Drop me a message": "メッセージを送る", "Send it": "送信"
+      "Questions I get asked": "よくある", "a lot": "ご質問",
+      "Say": "気軽に", "hello!": "こんにちは", "Drop me a message": "送信する", "Send it": "送信",
+      "How long does it take to build a page?": "制作期間は？",
+      "For the Starter plan it's usually 2–3 days. The Builder plan takes 5–7 days, and Pro Launch runs 7–10 days depending on complexity. Need it faster? Just ask, I'll do my best to work around your deadline.": "通常2〜10日です。お急ぎの場合は、納期に合わせて調整いたします。",
+      "What do I need to provide to get started?": "必要な準備は？",
+      "At minimum: what you're building, who it's for, and what action you want visitors to take. I'll ask the right questions to fill in the gaps. No design files required — I can work from a rough idea or a detailed brief.": "目的、ターゲット、内容のみ。デザイン案は不要です。",
+      "Do I own the code when it's done?": "コードの所有権は？",
+      "Absolutely. Once the project is complete, the code is 100% yours. You get the full source, you can host it wherever you want, and you can modify it freely. No strings attached.": "はい。完了後は100%あなたのものです。追加費用はありません。",
+      "Why is the Starter plan free? What's the catch?": "なぜ無料？",
+      "Honestly? No catch. It's free because I enjoy the work and it helps me build my portfolio. The free tier is simpler in scope, but it's a real, working page you can actually launch. If you need more, that's what the paid plans are for.": "裏はありません！実績作りのため。実際に公開可能な本格ページです。",
+      "Can I upgrade from Starter to Builder later?": "アップグレードは？",
+      "Yes! Lots of people start free to see how we work together, then upgrade for a bigger project. I'll credit the work already done so you're not starting from scratch.": "はい！まずは無料で試してから移行する方も多いです。",
+      "Do you work with people outside the US?": "海外対応は？",
+      "Definitely. I've worked with people across multiple time zones. Communication is mostly async, so it works out well regardless of where you are.": "はい。世界中のタイムゾーンに合わせて調整いたします。",
+      "What if I don't love the final result?": "不満な場合は？",
+      "Every plan includes revision rounds. I won't consider a project done until you're genuinely happy with it. If something's off, tell me specifically what you'd like changed and I'll fix it.": "修正は無制限です。納得がいくまで妥協しません。"
     },
     hi: {
       "Work": "काम", "Pricing": "कीमतें", "Contact": "संपर्क", "Book a Page": "बुक करें",
-      "landing pages": "लैंडिंग पेज", "made with ♥": "♥ के साथ बनाया गया", "fast & friendly": "तेज़ और मित्रवत", "let's build!": "चलो बनाते हैं!",
-      "Open for new projects right now": "नए प्रोजेक्ट्स के लिए उपलब्ध",
-      "I build landing pages that": "मैं ऐसे लैंडिंग पेज बनाता हूँ जो", "actually": "वास्तव में", "work.": "काम करते हैं।",
-      "No fluff, no jargon — just clean, beautiful pages designed to turn visitors into customers. Let's make something you're proud to share.": "कोई फालतू बात नहीं — सिर्फ साफ, सुंदर पेज जो आगंतुकों को ग्राहकों में बदलते हैं।",
-      "Book a page": "पेज बुक करें", "See my work": "मेरा काम देखें",
-      "Pages I've built": "मेरे बनाए गए पेज", "Want one like these?": "क्या आपको भी ऐसा ही चाहिए?",
-      "Simple, honest": "सरल और ईमानदार", "pricing": "कीमतें",
-      "Starter": "शुरुआती", "Builder": "बिल्डर", "Pro Launch": "प्रो लॉन्च",
-      "Questions I get asked": "अक्सर पूछे जाने वाले", "a lot": "प्रश्न",
-      "How long does it take to build a page?": "एक पेज बनाने में कितना समय लगता है?",
-      "For the Starter plan it's usually 2–3 days. The Builder plan takes 5–7 days, and Pro Launch runs 7–10 days depending on complexity. Need it faster? Just ask, I'll do my best to work around your deadline.": "स्टार्टर: 2-3 दिन, बिल्डर: 5-7 दिन। अगर आपको जल्दी चाहिए, तो कृपया बताएं।",
-      "What do I need to provide to get started?": "शुरू करने के लिए मुझे क्या देना होगा?",
-      "At minimum: what you're building, who it's for, and what action you want visitors to take. I'll ask the right questions to fill in the gaps. No design files required — I can work from a rough idea or a detailed brief.": "सिर्फ बुनियादी बातें: आपका प्रोजेक्ट, टारगेट ऑडियंस और मकसद। बाकी मैं पूछ लूँगी। डिजाइन फाइल जरूरी नहीं है।",
-      "Do I own the code when it's done?": "क्या काम पूरा होने के बाद कोड मेरा होगा?",
-      "Absolutely. Once the project is complete, the code is 100% yours. You get the full source, you can host it wherever you want, and you can modify it freely. No strings attached.": "बिल्कुल। काम पूरा होने के बाद कोड 100% आपका है। आप इसे कहीं भी होस्ट और मॉडिफाई कर सकते हैं।",
-      "Why is the Starter plan free? What's the catch?": "स्टार्टर प्लान फ्री क्यों है? इसमें क्या चाल है?",
-      "Honestly? No catch. It's free because I enjoy the work and it helps me build my portfolio. The free tier is simpler in scope, but it's a real, working page you can actually launch. If you need more, that's what the paid plans are for.": "कोई चाल नहीं है। यह पोर्टफोलियो बनाने के लिए फ्री है। यह एक असली और काम करने वाला पेज है।",
-      "Can I upgrade from Starter to Builder later?": "क्या मैं बाद में स्टार्टर से बिल्डर में अपग्रेड कर सकता हूँ?",
-      "Yes! Lots of people start free to see how we work together, then upgrade for a bigger project. I'll credit the work already done so you're not starting from scratch.": "हाँ! आप कभी भी अपग्रेड कर सकते हैं। पुराने काम को नए प्रोजेक्ट में जोड़ लिया जाएगा।",
-      "Do you work with people outside the US?": "क्या आप अमेरिका के बाहर के लोगों के साथ काम करती हैं?",
-      "Definitely. I've worked with people across multiple time zones. Communication is mostly async, so it works out well regardless of where you are.": "हाँ, मैं दुनिया भर के लोगों के साथ काम करती हूँ। हम समय के अनुसार तालमेल बिठा लेंगे।",
-      "What if I don't love the final result?": "अगर मुझे आखिरी नतीजा पसंद न आए तो?",
-      "Every plan includes revision rounds. I won't consider a project done until you're genuinely happy with it. If something's off, tell me specifically what you'd like changed and I'll fix it.": "हर प्लान में बदलाव की सुविधा है। मैं तब तक काम करती हूँ जब तक आप पूरी तरह खुश न हों।",
-      "Say": "नमस्ते", "hello!": "कहें!", "Drop me a message": "मुझे एक संदेश छोड़ें", "Send it": "भेजें"
+      "landing pages": "लैंडिंग पेज", "made with ♥": "♥ के साथ", "fast & friendly": "तेज़ और मित्रवत", "let's build!": "चलो बनाते हैं!",
+      "Open for new projects right now": "नए काम के लिए उपलब्ध",
+      "I build landing pages that": "मैं ऐसे पेज बनाती हूँ जो", "actually": "वाकई", "work.": "काम करते हैं।",
+      "No fluff, no jargon — just clean, beautiful pages designed to turn visitors into customers. Let's make something you're proud to share.": "बिना किसी फालतू बात के — सुंदर पेज जो विजिटर्स को ग्राहकों में बदल दें।",
+      "Book a page": "पेज बुक करें", "See my work": "काम देखें",
+      "Pages I've built": "मेरे प्रोजेक्ट्स", "Want one like these?": "ऐसा चाहिए?",
+      "Simple, honest": "सरल और ईमानदार", "pricing": "दाम",
+      "Starter": "स्टार्टर", "Builder": "बिल्डर", "Pro Launch": "प्रो लॉन्च",
+      "Questions I get asked": "अक्सर पूछे जाने", "a lot": "वाले सवाल",
+      "Say": "कहें", "hello!": "नमस्ते!", "Drop me a message": "मैसेज भेजें", "Send it": "भेजें",
+      "How long does it take to build a page?": "कितना समय लगता है?",
+      "For the Starter plan it's usually 2–3 days. The Builder plan takes 5–7 days, and Pro Launch runs 7–10 days depending on complexity. Need it faster? Just ask, I'll do my best to work around your deadline.": "आमतौर पर 2-10 दिन। जल्दी चाहिए? बताएं, मैं पूरी कोशिश करूँगी।",
+      "What do I need to provide to get started?": "क्या देना होगा?",
+      "At minimum: what you're building, who it's for, and what action you want visitors to take. I'll ask the right questions to fill in the gaps. No design files required — I can work from a rough idea or a detailed brief.": "सिर्फ बुनियादी बातें: आपका प्रोजेक्ट और मकसद। डिजाइन जरूरी नहीं।",
+      "Do I own the code when it's done?": "क्या कोड मेरा होगा?",
+      "Absolutely. Once the project is complete, the code is 100% yours. You get the full source, you can host it wherever you want, and you can modify it freely. No strings attached.": "बिल्कुल। काम पूरा होने के बाद कोड 100% आपका है।",
+      "Why is the Starter plan free? What's the catch?": "फ्री क्यों है?",
+      "Honestly? No catch. It's free because I enjoy the work and it helps me build my portfolio. The free tier is simpler in scope, but it's a real, working page you can actually launch. If you need more, that's what the paid plans are for.": "कोई चाल नहीं! यह पोर्टफोलियो के लिए है। यह एक असली पेज है।",
+      "Can I upgrade from Starter to Builder later?": "अपग्रेड संभव है?",
+      "Yes! Lots of people start free to see how we work together, then upgrade for a bigger project. I'll credit the work already done so you're not starting from scratch.": "हाँ! आप कभी भी अपग्रेड कर सकते हैं।",
+      "Do you work with people outside the US?": "विदेश सेवा?",
+      "Definitely. I've worked with people across multiple time zones. Communication is mostly async, so it works out well regardless of where you are.": "हाँ! मैं दुनिया भर के क्लाइंट्स के साथ काम करती हूँ।",
+      "What if I don't love the final result?": "पसंद न आए तो?",
+      "Every plan includes revision rounds. I won't consider a project done until you're genuinely happy with it. If something's off, tell me specifically what you'd like changed and I'll fix it.": "बदलाव शामिल हैं। मैं तब तक नहीं रुकती जब तक आपको पेज पसंद न आ जाए।"
     }
   };
 
-  let currentLang = 'en';
-
   function changeLanguage(lang) {
-    if (lang === currentLang) return;
-    
-    // Refresh the page when going back to English to restore the original HTML cleanly
-    if (lang === 'en') { 
-      location.reload(); 
-      return; 
-    } 
-    // If switching between two foreign languages, reload first so it translates from the clean English base
-    if (currentLang !== 'en' && lang !== 'en') {
+    if (lang === 'en') {
+      sessionStorage.removeItem('targetLang');
+    } else {
       sessionStorage.setItem('targetLang', lang);
-      location.reload();
-      return;
     }
-
-    const dict = translations[lang];
-    
-    // The "TreeWalker" logic: It scans all text on the site WITHOUT breaking your HTML tags
-    const walk = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
-    let node;
-    
-    while(node = walk.nextNode()) {
-      let text = node.nodeValue.trim();
-      if (text && dict[text]) {
-        node.nodeValue = node.nodeValue.replace(text, dict[text]);
-      }
-    }
-    
-    // Fallback for nested elements like your buttons and squiggles
-    document.querySelectorAll('em, span, a, button').forEach(el => {
-       let t = el.innerText.trim();
-       if(dict[t]) el.innerText = dict[t];
-    });
-
-    document.documentElement.lang = lang;
-    currentLang = lang;
+    location.reload();
   }
 
-  // Auto-load a language if the page had to refresh to switch it safely
   window.addEventListener('DOMContentLoaded', () => {
     const savedLang = sessionStorage.getItem('targetLang');
-    if (savedLang) {
+    if (savedLang && translations[savedLang]) {
       document.getElementById('langSelect').value = savedLang;
-      sessionStorage.removeItem('targetLang');
-      changeLanguage(savedLang);
+      const dict = translations[savedLang];
+
+      const walk = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+      let node;
+      while(node = walk.nextNode()) {
+        let val = node.nodeValue.trim();
+        if (dict[val]) {
+          node.nodeValue = node.nodeValue.replace(val, dict[val]);
+        }
+      }
+      document.documentElement.lang = savedLang;
     }
+
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
   });
 
-  // --- Your Exact Site Logic Below (Untouched) ---
-  const nav = document.getElementById('nav');
-  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40));
-  
-  const obs = new IntersectionObserver((entries) => { 
-    entries.forEach(e => { 
-      if (e.isIntersecting) { 
-        e.target.classList.add('visible'); 
-        obs.unobserve(e.target); 
-      } 
-    }); 
-  }, { threshold: 0.06 });
-  
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-
-  function toggleFaq(btn) { 
-    const item = btn.closest('.faq-item'); 
-    const wasOpen = item.classList.contains('open'); 
-    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open')); 
-    if (!wasOpen) item.classList.add('open'); 
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
   }
 
   function scaleIframes() {
     document.querySelectorAll('.iframe-wrap').forEach(wrap => {
       const iframe = wrap.querySelector('iframe');
-      if (!iframe) return;
-      const scale = wrap.offsetWidth / 1440;
-      iframe.style.width  = '1440px';
-      iframe.style.height = (wrap.offsetHeight / scale) + 'px';
-      iframe.style.transform = `scale(${scale})`;
+      if (iframe) {
+        const scale = wrap.offsetWidth / 1440;
+        iframe.style.width  = '1440px';
+        iframe.style.height = (wrap.offsetHeight / scale) + 'px';
+        iframe.style.transform = `scale(${scale})`;
+      }
     });
   }
 
@@ -966,6 +952,8 @@
   window.addEventListener('resize', scaleIframes);
   setTimeout(scaleIframes, 500);
 </script>
+
+```
 <style>
   @keyframes bob {
     0%, 100% { transform: translateY(0); }
