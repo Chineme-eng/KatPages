@@ -37,10 +37,10 @@ This repository contains **all source code, assets, and configuration files** re
 ## 💻 Previews
 
 **Home / Portfolio Showcase**
-![Home Screenshot](assets/images/screenshot-home.png)
+![Home Screenshot](assets/screenshot-home.png)
 
 **Pricing Section**
-![Pricing Screenshot](assets/images/screenshot-pricing.png)
+![Pricing Screenshot](assets/screenshot-pricing.png)
 
 ---
 
