@@ -127,9 +127,3 @@ https://<your-username>.github.io/KatPages/
 ✅ **Everything is ready:** badges, screenshots, elaboration, professional structure, client-ready language.
 
 You can copy this as-is into your repository.
-
----
-
-If you want, I can **also make a “hero banner style README”** where the top screenshot spans the full width of GitHub’s preview so it looks like a portfolio landing page inside GitHub itself.
-
-Do you want me to do that too?
